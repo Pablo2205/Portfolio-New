@@ -225,7 +225,7 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
         },
         {
           name:"Vercel",
-          svgIcon:"Vercel.svg"          
+          svgIcon:"vercel.svg"          
         },  
       ]
     },
@@ -325,7 +325,7 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
       image: '/images/projectsImages/portalusers.png',
       category:"Infrastructure",
       data:{
-        description: `Portal para usuarios para la gestion de incidencias y requerimientos de soporte tecnico, La interface brinda al usuario la posibilidad de abrir un ticket de soporte tecnico, ver el estado de los tickets abiertos, ver el historial de tickets cerrados, y la posibilidad de descargar manuales y guias de usuario.`,
+        description: `User portal for managing incidents and technical support requests. The interface allows users to open a technical support ticket, view the status of open tickets, view the history of closed tickets, and download manuals and user guides.`,
         demoLink: "https://google.com/",
       },
       stack:[
