@@ -225,7 +225,7 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
         },
         {
           name:"Vercel",
-          svgIcon:"vercel.svg"          
+          svgIcon:"/images/vercel.svg"          
         },  
       ]
     },
