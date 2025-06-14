@@ -22,12 +22,12 @@ export const projects = [
       image: '/images/projectsImages/smartset.png',
       category:"Engineering",
       data:{
-         description: `Participacion de un importante proyecto dentro del area de la ingenieria del IoT, se implemento un producto tecnologico el cual autogestiona las telecom unicaciones del medio fidico del consumo energetico de medidores monofasico y trifasicos,
-                        el mismo es capar de realizar un motinoreo exacto de la red de suministro asi como las variables fisiscas, el mismo crea una red BLE Mesh y Thread para comunicaciones PAN y se acopla a una red LAN/WAN mas ambplia mediante el uso de LTE 5G y NBIoT
-                        En su mínima expresión SmartSET despliega una red inalámbrica de alcance local que le permite colectar información de los sensores asociados a una sub estación transformadora de distribución 
-                        De este modo se adquieren la totalidad de los parámetros eléctricos (Energía, potencia, tensión, corrientes, THD, etc) en los bornes de salida del transformador, la temperatura del aceite refrigerante, la temperatura y humedad ambiente, la totalidad de los parámetros eléctricos en cada salida de la SET 
-                        Toda esta información es colectada por una unidad integral de gestión (UIG) que la almacena en una base de datos local, la organizada por grupo de sensores y guarda registro temporal de cada dato adquirido.  
-                        Para facilitar el acceso a esta información SmartSET cuenta con una página web embebida a la que se puede acceder localmente con cualquier dispositivo móvil mediante una conexión WiFi. Esto permite a los operarios de mantenimiento contar con información del estado actual de la SET así como también evaluar los registros históricos del sistema.  `,
+         description: `Participation in an important project within the IoT engineering field. A technological product was implemented that self-manages the telecommunications of the physical medium for energy consumption from single-phase and three-phase meters.
+It is capable of performing accurate monitoring of the supply network as well as physical variables. It creates a BLE Mesh and Thread network for PAN communications and connects to a broader LAN/WAN network through the use of 5G LTE and NBIoT.
+In its simplest form, SmartSET deploys a local wireless network that allows it to collect information from sensors associated with a distribution transformer substation.
+In this way, all electrical parameters (energy, power, voltage, currents, THD, etc.) are acquired at the transformer output terminals, along with the cooling oil temperature, ambient temperature and humidity, and all electrical parameters at each SET output.
+All this information is collected by an integrated management unit. (UIG), which stores it in a local database, organized by sensor group, and keeps a temporary record of each acquired data.
+To facilitate access to this information, SmartSET has an embedded web page that can be accessed locally with any mobile device via a Wi-Fi connection. This allows maintenance operators to access information on the current status of the SET as well as evaluate the system's historical records.  `,
          demoLink: "https://google.com/",
       },
       stack:[
@@ -56,7 +56,7 @@ export const projects = [
       image: '/images/projectsImages/THT.jpg',
       category:"Engineering",
       data:{
-        description:`La unidad de medición de Humedad y temperatura es un módulo pensado para adquisición de información ambientales del entorno del trasformador de distribución. Esta unidad se basa en la tecnología “Microelectromechanical Systems” o MEMs por sus siglas en inglés para adquirir y registrar la temperatura y humedad ambiente. Cuenta también con un puerto para conexión de una sonda PT100 remota que permite conocer la temperatura del aceite refrigerante del transformador. La sonda MEMs transmite la información a la unidad en forma digital por lo que se puede intercambiar libremente por otras de la misma tecnología sin requerir ajuste alguno. Respecto de la sonda PT100 al amplificar de señal interno utiliza la configuración de 3 hilos para compensar automáticamente el largo del cable utilizado en la instalación. Por ultimo este módulo también cuenta con conectividad Bluetooth y NFC para permitir su integración a la plataforma Smart-SET. `,
+        description:`The Humidity and Temperature Measurement Unit is a module designed to acquire environmental data from the distribution transformer environment. This unit is based on Microelectromechanical Systems (MEMS) technology to acquire and record ambient temperature and humidity. It also features a port for connecting a remote PT100 probe to measure the temperature of the transformer's cooling oil. The MEMs probe transmits information to the unit digitally, allowing it to be freely exchanged for others using the same technology without requiring any adjustments. The PT100 probe uses a 3-wire configuration to automatically compensate for the length of the cable used in the installation, thanks to its internal signal amplification. Finally, this module also features Bluetooth and NFC connectivity to allow for integration into the Smart-SET platform. `,
         demoLink: "https://google.com/",
       },
       stack:[
@@ -85,8 +85,8 @@ export const projects = [
       image: '/images/projectsImages/UPS.jpg',
       category:"Engineering",
       data:{
-        description: `Sistema de alimentación ininterrumpida capaz de sostener alimentación de energía a un SBC (ej: Raspberry) y los elementos accesorios durante la ausencia de tensión de alimentación primaria. Supervisión de operación de HOST, funcionando como un “WatchDOG”. Siendo este dispositivo el responsable de realizar un “HardReset” del SBC en caso de considerar que el mismo se encuentra fuera de servicio. 
-        Dentro del Sistema Smart Set se encarga de garantizar el correcto suministro de energía y supervisar a los módulos TEA y UIG. Puede usarse en otros sistemas industriales como sistema de alimentación ininterrumpida con montaje para riel DIN. `,
+        description: `Uninterruptible power supply (UPS) capable of maintaining power to an SBC (e.g., Raspberry Pi) and accessory components during a primary power supply absence. It monitors HOST operation, functioning as a "WatchDOG." This device is responsible for performing a "Hard Reset" of the SBC if it is deemed out of service.
+Within the Smart Set System, it is responsible for ensuring proper power supply and monitoring the TEA and UIG modules. It can be used in other industrial systems as an uninterruptible power supply with DIN rail mounting. `,
         demoLink: "https://google.com/",
       },
       stack:[
@@ -115,9 +115,9 @@ export const projects = [
       image: '/images/projectsImages/TEA.jpg',
       category:"Engineering",
       data:{
-        description: `La Unidad de Medición de Transformador de Energía (TEA) es un módulo pensado para adquisición de información eléctrica del transformador de distribución. 
-        Esta unidad se basa en la tecnología “Microelectromechanical Systems” o MEMs por sus siglas en inglés para adquirir y registrar la temperatura y humedad ambiente. 
-        uenta también con un puerto para conexión de una sonda PT100 remota que permite conocer la temperatura del aceite refrigerante del transformador`,
+        description: `The Power Transformer Measurement Unit (TEA) is a module designed to acquire electrical data from the distribution transformer.
+This unit uses Microelectromechanical Systems (MEMs) technology to acquire and record ambient temperature and humidity.
+It also features a port for connecting a remote PT100 probe to measure the temperature of the transformer's cooling oil.`,
         },
       demoLink: "https://google.com/",
       stack:[
@@ -146,8 +146,7 @@ export const projects = [
       image: '/images/projectsImages/POW.jpg',
       category:"Engineering",
       data:{
-        description: `POW es parte de un sistema de tele medición compuesto por sensores y sistemas de comunicación que puede funcionar como un módulo independiente en otros tipos de sistemas e instalaciones como una fuente de alimentación con la característica principal de que posee un rango de operación muy amplio (60-440Vca). 
-        Su principal funcion es la de proveer de energía a las distintas partes del sistema Smart Set: UIG, TEA y UAS de Temperatura y humedad `,
+        description: `POW is part of a remote measurement system composed of sensors and communication systems that can function as a standalone module in other types of systems and installations, serving as a power supply. Its main feature is its very wide operating range (60-440 V AC). Its main function is to provide power to the various components of the Smart Set system: the UIG, TEA, and UAS for Temperature and Humidity. `,
         },
       demoLink: "https://google.com/",
       stack:[
@@ -176,10 +175,10 @@ export const projects = [
       image: '/images/projectsImages/electronic.png',
       category:"Engineering",
       data:{
-        description: `Sistema de clasificación de residuos electrónicos, 
-        El sistema se basa en la utilización de una red de sensores los cuales miden las propiedades fisicas de los residuos y ayudan a la determinacion del objeto que se esta clasificando.
-        El sistema es capaz de clasificar los residuos en 4 categorías, metales, plásticos, papeles y vidrios.
-        El sistema es capaz de clasificar los residuos en tiempo real y de forma autónoma.`,
+        description: `Electronic waste sorting system
+The system is based on a network of sensors that measure the physical properties of the waste and help determine the object being sorted.
+The system is capable of sorting waste into four categories: metals, plastics, paper, and glass.
+The system is capable of sorting waste in real time and autonomously.`,
         demoLink: "https://google.com/",
       },
       stack:[
@@ -207,7 +206,8 @@ export const projects = [
       image: '/images/projectsImages/portfolio-react.png',
       category:"Development",
       data:{
-        description: `Portafolio web personal, con la finalidad de mostrar mis habilidades y proyectos realizados, con la posibilidad de contactarme mediante el formulario de contacto, y ver mis redes sociales.`,
+        description: `Personal web portfolio, designed to showcase my skills and completed projects, with the option to contact me via the contact form and view my social media accounts.
+It was developed with React and Tailwind and published on Vercel Hosting.`,
         demoLink: `https://github.com/Pablo2205/Portfolio-New`,
       },
       stack:[
@@ -223,6 +223,10 @@ export const projects = [
           name:"JavaScript",
           svgIcon: "/images/javascript.svg",
         },
+        {
+          name:"Vercel",
+          svgIcon:"Vercel.svg"          
+        },  
       ]
     },
     {
@@ -231,7 +235,7 @@ export const projects = [
       image: '/images/projectsImages/WheaterApp.png',
       category:"Development",
       data:{
-        description: `Programa web capaz de mostrar el clima actual de una ciudad, con la posibilidad de ver el clima de los proximos 5 dias, con la posibilidad de ver la temperatura, humedad, viento, y la probabilidad de lluvia.`,
+        description: `A web program capable of displaying the current weather in a city, with the ability to view the weather for the next 5 days, including temperature, humidity, wind, and the probability of rain.`,
         demoLink: "https://google.com/",
       },
       stack:[
@@ -255,7 +259,7 @@ export const projects = [
       image: '/images/projectsImages/PasswordGenerate.png',
       category:"Development",
       data:{
-        description: `Programa web para la generacion aleatoria de claves seguras pudiendo elegir la complejidad de la misma mediante la seleccion de longitud de la misma y los caracteres a utilizar. A su vez facilita el copiado al portapapeles del usuario,`,
+        description: `Web program for generating random secure keys, allowing you to select the complexity by selecting the length and characters used. It also allows users to copy the keys to the clipboard.`,
         demoLink: "https://google.com/",
       },
       stack:[
@@ -271,7 +275,7 @@ export const projects = [
       image: '/images/projectsImages/Calculator.png',
       category:"Development",
       data:{
-        description: `Un sencillo pero eficiente programa de calculadora cientifica, con todas las funciones basicas de una calculadora cientifica, con la posibilidad de realizar operaciones basicas.`,
+        description: `A simple yet efficient scientific calculator program, with all the basic functions of a scientific calculator, with the ability to perform basic operations.`,
         demoLink: "https://google.com/",
       },
       stack:[
