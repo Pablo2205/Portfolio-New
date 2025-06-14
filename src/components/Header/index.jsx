@@ -62,7 +62,7 @@ const Header = () => {
               Hola soy <span className="color__primary">Pablo Coria</span>
             </div>
             <div className="header__info__middle">
-              <h1 className="primary__title header__title">Software Developer</h1>
+              <h1 className="primary__title header__title">DevOps Engineer</h1>
               <p className="text__muted header__description">
               I am dedicated to the development of technological solutions for different areas, such as IoT and Machine Learning. 
               I am also involved in the implementation of new technologies within the IT area and programming in multiple languages.
@@ -73,7 +73,7 @@ const Header = () => {
               <a href="/CV - pcoria.pdf" target="_blank" rel="noopener noreferrer">
                 <button className="btn">Download CV</button>
               </a>
-              <a href="mailto:coriapablookk567@gmail.com" className="btn">Email Me</a>
+              <a href="mailto:pablo.cor1@Icloud.com" className="btn">Email Me</a>
             </div>
           </div>
         </div>
