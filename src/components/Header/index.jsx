@@ -59,7 +59,7 @@ const Header = () => {
         <div className="column intro__container blur-effect">
           <div className="header__info">
             <div className="header__info__top">
-              Hola soy <span className="color__primary">Pablo Coria</span>
+              Hello, I'm <span className="color__primary">Pablo Coria</span>
             </div>
             <div className="header__info__middle">
               <h1 className="primary__title header__title">DevOps Engineer</h1>
