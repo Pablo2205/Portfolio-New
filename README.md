@@ -26,6 +26,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-![image](https://github.com/user-attachments/assets/f72c7a18-a698-4b89-a6bc-bc0d513defed)
-![image](https://github.com/user-attachments/assets/4eb730ea-1846-43f2-83a9-aa56ccd5e814)
 
