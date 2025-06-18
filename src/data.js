@@ -410,11 +410,6 @@ export const experience = [
               svgIcon: "/images/windows.svg",
           },
           {
-              skill: "Active Directory",
-              level: "Advanced",
-              svgIcon: "/images/ad.svg",
-          },
-          {
               skill: "Linux",
               level: "Experienced",
               svgIcon: "/images/linux.svg",
@@ -439,11 +434,6 @@ export const experience = [
               level: "Intermediate",
               svgIcon: "/images/powershell.svg",
           },
-          {
-            skill: "Microsoft Office",
-              level: "Experienced",
-              svgIcon: "/images/microsoft.svg",
-          }
       ],
   },
   {
@@ -556,7 +546,7 @@ export const experience = [
           },
           {
               skill: "Docker",
-              level: "Experienced",
+              level: "Basic",
               svgIcon: "/images/docker.svg",
           },
           {
@@ -567,7 +557,7 @@ export const experience = [
           {
               skill: "OpenShift",
               level: "Basic",
-              svgIcon: "/images/OpenShift.svg",
+              svgIcon: "/images/openshift.svg",
           },
           {
               skill: "Jenkins",
