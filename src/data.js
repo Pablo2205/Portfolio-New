@@ -427,7 +427,7 @@ export const experience = [
           {
               skill: "Veeam",
               level: "Intermediate",
-              svgIcon: "/images/veeam.svg",
+              svgIcon: "/images/Veeam.svg",
           },
           {
               skill: "Bash Scripting",
@@ -499,6 +499,11 @@ export const experience = [
               level: "Basic",
               svgIcon: "/images/google.svg",
           },
+          {
+              skill: "IBM Cloud",
+              level: "Basic",
+              svgIcon: "/images/IBM.svg",
+          },
     ],
   },
   {
@@ -527,7 +532,7 @@ export const experience = [
       ],
   },
   {
-    title: "Others",
+    title: "DevOps",
       data: [
           {
               skill: "Git",
@@ -545,14 +550,34 @@ export const experience = [
               svgIcon: "/images/github.svg",
           },
           {
-              skill: "Sage ERP",
+              skill: "Jira",
               level: "Advanced",
-              svgIcon: "/images/sage.svg",
+              svgIcon: "/images/jira.svg",
           },
           {
-              skill: "Electronics",
+              skill: "Docker",
               level: "Experienced",
-              svgIcon: "/images/microchip.svg",
+              svgIcon: "/images/docker.svg",
+          },
+          {
+              skill: "Kubernetes",
+              level: "Basic",
+              svgIcon: "/images/kuber.svg",
+          },
+          {
+              skill: "OpenShift",
+              level: "Basic",
+              svgIcon: "/images/OpenShift.svg",
+          },
+          {
+              skill: "Jenkins",
+              level: "Basic",
+              svgIcon: "/images/jenkins.svg",
+          },
+          {
+              skill: "Vercel",
+              level: "Basic",
+              svgIcon: "/images/vercel.svg",
           },
       ],
   }
