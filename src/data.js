@@ -230,7 +230,39 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
       ]
     },
     {
-      id:8,
+      id: 8,
+      title: 'IBM DevOps & Software Development Capstone Project',
+      image: '/images/projectsImages/IBMDO.png',
+      category:"Development",
+      data:{
+        description: `This project is part of the IBM DevOps and Software Development Professional Certificate. It involves creating a web application that allows users to manage their tasks, including adding, editing, and deleting tasks. The application is built using Python, Flask, and MongoDB, and it is deployed on IBM Cloud.`,
+        demoLink: "https://google.com/",
+      },
+      stack:[
+        {
+          name:"Python",
+          svgIcon: "/images/python.svg",
+        },
+        {
+          name:"Docker ", 
+          svgIcon: "/images/docker.svg",
+        },
+        {
+          name:"PostgreSQL",
+          svgIcon: "/images/postgresql.svg",
+        },
+        {
+          name: "Git ",
+          svgIcon: "/images/git.svg",
+        },
+        {
+          name:"IBM Cloud",
+          svgIcon: "/images/IBM.svg",
+        }
+      ]
+    },
+    {
+      id:9,
       title: 'Wheater App',
       image: '/images/projectsImages/WheaterApp.png',
       category:"Development",
@@ -254,7 +286,7 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
       ]
     },
    {
-      id:9,
+      id:10,
       title: 'Password Generator',
       image: '/images/projectsImages/PasswordGenerate.png',
       category:"Development",
@@ -270,7 +302,7 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
       ]
     }, 
     {
-      id:10,
+      id:11,
       title: 'Cientific Calculator',
       image: '/images/projectsImages/Calculator.png',
       category:"Development",
@@ -295,7 +327,7 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
     },
     
     {
-      id:11,
+      id:12,
       title: 'Veeam Backup for Microsoft 365',
       image: '/images/projectsImages/veeam365-flow.png',
       category:"Infrastructure",
