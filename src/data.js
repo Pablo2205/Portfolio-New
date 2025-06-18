@@ -550,16 +550,6 @@ export const experience = [
               svgIcon: "/images/sage.svg",
           },
           {
-              skill: "Kali Linux",
-              level: "Basic",
-              svgIcon: "/images/kali.svg",
-          },
-          {
-              skill: "Hetical Hacking",
-              level: "Basic",
-              svgIcon: "/images/masscan.svg",
-          },
-          {
               skill: "Electronics",
               level: "Experienced",
               svgIcon: "/images/microchip.svg",
