@@ -224,8 +224,8 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
           svgIcon: "/images/vercel.svg",          
         },  
         {
-            name:"DonWeb Hosting",
-            svgIcon: "/images/dw.svg",
+            name:"Hostinger",
+            svgIcon: "/images/hostinger.svg",
         },
       ]
     },
