@@ -220,10 +220,6 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
           svgIcon: "/images/tailwindcss.svg",
         },
         {
-          name:"JavaScript",
-          svgIcon: "/images/javascript.svg",
-        },
-        {
           name:"Vercel",
           svgIcon: "/images/vercel.svg",          
         },  
@@ -243,10 +239,6 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
         demoLink: "https://google.com/",
       },
       stack:[
-        {
-          name:"Python",
-          svgIcon: "/images/python.svg",
-        },
         {
           name:"Docker ", 
           svgIcon: "/images/docker.svg",
