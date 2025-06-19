@@ -227,12 +227,16 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
           name:"Vercel",
           svgIcon: "/images/vercel.svg",          
         },  
+        {
+            name:"DonWeb Hosting",
+            svgIcon: "/images/dw.svg",
+        },
       ]
     },
     {
       id: 8,
       title: 'IBM DevOps & Software Development Capstone Project',
-      image: '/images/projectsImages/IBMDO.png',
+      image: '/images/projectsImages/IBMPR.png',
       category:"Development",
       data:{
         description: `This project is part of the IBM DevOps and Software Development Professional Certificate. It involves creating a web application that allows users to manage their tasks, including adding, editing, and deleting tasks. The application is built using Python, Flask, and MongoDB, and it is deployed on IBM Cloud.`,
@@ -332,14 +336,13 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
       image: '/images/projectsImages/veeam365-flow.png',
       category:"Infrastructure",
       data:{
-        description: `Implementacion del orquestador mas importante a nivel mundial dentro del area de Backup y restauraciones, 
-        utilizando Veeam Backup for Microsoft 365 como el orquestador central para la gestion de backups y restauraciones de las aplicaciones de Microsoft 365 dentro de un entorno empresarial con mas de 150 usuarios.`,
+        description: `Implementation of the world's leading backup and restore orchestrator, using Veeam Backup for Microsoft 365 as the central orchestrator for managing backups and restores of Microsoft 365 applications within a business environment with more than 150 users.`,
         demoLink: "https://google.com/",
       },
       stack:[
         {
           name:"Veeam",
-          svgIcon: "/images/veeam_logo2.svg",
+          svgIcon: "/images/Veeam_logo2.svg",
         },
         {
           name:"Office 365",
@@ -352,7 +355,7 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
       ]
     },
     {
-      id:12,
+      id:13,
       title: 'Portal from user HelpDesk IT',
       image: '/images/projectsImages/portalusers.png',
       category:"Infrastructure",
