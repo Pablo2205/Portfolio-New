@@ -232,7 +232,7 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
     {
       id: 8,
       title: 'IBM DevOps & Software Development Capstone Project',
-      image: '/images/projectsImages/IBMPR.png',
+      image: '/images/projectsImages/IBMPR1.jpg',
       category:"Development",
       data:{
         description: `This project is part of the IBM DevOps and Software Development Professional Certificate. It involves creating a web application that allows users to manage their tasks, including adding, editing, and deleting tasks. The application is built using Python, Flask, and MongoDB, and it is deployed on IBM Cloud.`,
