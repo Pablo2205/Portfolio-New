@@ -11,7 +11,10 @@ const Contact = () => {
         <div className="section__header">
           <h2 className="primary__title">Contact Me</h2>
           <p className="text__muted description">
-          Are you ready to take your digital presence to the next level? Whether you're looking to launch a new website, revamp an existing one, or need expert advice on the best web technologies, I'm here to help. Contact me for advice on your project.
+          ¿Listo para llevar tu infraestructura y desarrollo al siguiente nivel? Ya sea que necesites lanzar un nuevo proyecto, optimizar tu entorno actual o contar con asesoramiento especializado en tecnologías DevOps, estoy para ayudarte.
+Contáctame y conversemos sobre cómo hacer realidad tus ideas con soluciones eficientes, seguras y escalables.
+
+
           </p>
         </div>
         <div className="contact__group">
