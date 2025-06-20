@@ -32,7 +32,7 @@ const About = () => {
         </div>
         <div className="section__header">
           <h2 className="primary__title">About Me</h2>
-          <h1 className="title">I am <span className="color__primary">Pablo Coria</span></h1>
+          <h1 className="title">Mi nombre es <span className="color__primary">Pablo Coria</span></h1>
           <p className="text__muted description">
           Soy estudiante de Sistemas, con interés en el desarrollo de soluciones tecnológicas eficientes y funcionales. Tengo experiencia trabajando con diversos lenguajes de programación y frameworks, así como en el diseño y administración de bases de datos, sistemas automatizados, productos tecnológicos y servicios de software.
           Me destaco por mis habilidades analíticas y de resolución de problemas, y he participado en proyectos relacionados con la ingeniería IoT y la infraestructura IT, integrando conocimientos técnicos con un enfoque práctico.
