@@ -64,9 +64,9 @@ const Header = () => {
             <div className="header__info__middle">
               <h1 className="primary__title header__title">DevOps Engineer</h1>
               <p className="text__muted header__description">
-              Profesional en DevOps con formación en desarrollo de software y experiencia sólida en operaciones de TI. Integro conocimientos de programación con la gestión de infraestructura para automatizar procesos, mejorar la eficiencia operativa y garantizar despliegues continuos, seguros y escalables.
-
-Tengo experiencia trabajando con pipelines CI/CD, contenedores, orquestación con Kubernetes, automatización con Ansible o Terraform, y herramientas de monitoreo. Mi enfoque combina el desarrollo ágil con la estabilidad y seguridad de los entornos productivos, promoviendo la colaboración entre equipos y la entrega continua de valor.
+              Profesional en DevOps con formación en desarrollo de software y experiencia sólida en operaciones de TI. Integro conocimientos de programación con la gestión de infraestructura para automatizacion y mejora de procesos y despliegues continuos, seguros y escalables.
+              Tengo experiencia trabajando con pipelines CI/CD, contenedores, orquestadores, automatización y despliegues de Infraestriuctura como codigo, y herramientas de monitoreo. 
+              Mi enfoque combina el desarrollo ágil con la estabilidad y seguridad de los entornos productivos, promoviendo la colaboración entre equipos y la entrega continua de valor.
               </p>
             </div>
             <Facts />
