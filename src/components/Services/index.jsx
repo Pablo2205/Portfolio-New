@@ -171,7 +171,7 @@ const Services = () => {
           <div className="section__header center">
             <h2 className="primary__title">Services</h2>
             <p className="text__muted description">
-            I transform your needs into my commitments, offering a wide range of services including infrastructure management, software development and cybersecurity.            </p>
+            Transformo los desafíos tecnológicos en soluciones automatizadas y eficientes. Ofrezco servicios enfocados en prácticas DevOps, que incluyen gestión de infraestructura, automatización de despliegues, integración y entrega continua (CI/CD), desarrollo de software y fortalecimiento de la seguridad en entornos IT.            </p>
           </div>
 
           <div className="services__group">
@@ -184,9 +184,8 @@ const Services = () => {
               </div>
               <div className="service__middle">
                 <p className="text__muted description">
-                Do you need to optimize and protect your technological infrastructure?
-I offer you a comprehensive service that includes the complete administration of your assets, guaranteeing their security and maximum performance,
-along with the efficient management of physical and virtual servers. I provide monitoring and security services for your data, including immutable backup of the same.
+                Ofrezco un servicio integral de gestión y automatización de infraestructura, orientado a maximizar el rendimiento, la disponibilidad y la seguridad de tus sistemas.
+Implemento prácticas de infraestructura como código (IaC) para administrar servidores físicos, virtuales y entornos en la nube de forma eficiente y repetible. También incorporo soluciones de monitoreo continuo, backups inmutables y medidas de protección que aseguran la integridad de tus datos y la estabilidad de tus operaciones.
                 </p>
               </div>
               <div className="service__bottom">
@@ -203,10 +202,8 @@ along with the efficient management of physical and virtual servers. I provide m
               </div>
               <div className="service__middle">
                 <p className="text__muted description">
-                Are you looking for a backend software development expert?
-I offer a complete service that includes the creation of robust and scalable architectures,
-optimizing their management and ensuring maximum performance and security. I develop efficient and secure APIs,
-integrating complex systems to improve the functionality of your applications.
+                Ofrezco servicios de desarrollo backend con enfoque DevOps, combinando la creación de arquitecturas robustas y escalables con prácticas de integración y entrega continua (CI/CD).
+Desarrollo APIs eficientes y seguras, facilitando la integración de sistemas complejos y mejorando la funcionalidad de tus aplicaciones. Todo el proceso está alineado con buenas prácticas de automatización, pruebas, control de versiones y despliegue, asegurando un desarrollo ágil, confiable y preparado para producción.
                 </p>
               </div>
               <div className="service__bottom">
@@ -219,11 +216,14 @@ integrating complex systems to improve the functionality of your applications.
                 <div className="icon__container">
                   <SiSecurityscorecard className="icon"/>
                 </div>
-                <h3 className="title">Cybersecurity</h3>
+                <h3 className="title">Dev Sec Ops</h3>
               </div>
               <div className="service__middle">
                 <p className="text__muted description">
-                Are you looking for a computer security expert? I offer comprehensive security services, including vulnerability scanning, penetration testing, and thorough audits. I implement hacking to identify risks and develop solutions to strengthen security, ensuring the protection and integrity of your information.                </p>
+                 Integro la seguridad desde las primeras etapas del desarrollo, aplicando prácticas DevSecOps para identificar y mitigar riesgos antes de llegar a producción.
+Ofrezco servicios que incluyen análisis de vulnerabilidades, pruebas automatizadas, escaneo de código (SAST/DAST) y auditorías de seguridad adaptadas a entornos CI/CD.
+Implemento controles de acceso, gestión de secretos y medidas de hardening, asegurando que tus aplicaciones y sistemas cumplan con estándares de seguridad sin comprometer la agilidad del desarrollo.               
+                </p>
               </div>
               <div className="service__bottom">
                 <button className="btn btn__primary">Read more</button>
