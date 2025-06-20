@@ -59,13 +59,14 @@ const Header = () => {
         <div className="column intro__container blur-effect">
           <div className="header__info">
             <div className="header__info__top">
-              Hello, I'm <span className="color__primary">Pablo Coria</span>
+              Hola, soy <span className="color__primary">Pablo</span>
             </div>
             <div className="header__info__middle">
               <h1 className="primary__title header__title">DevOps Engineer</h1>
               <p className="text__muted header__description">
-              I am dedicated to the development of technological solutions for different areas, such as IoT and Machine Learning. 
-              I am also involved in the implementation of new technologies within the IT area and programming in multiple languages.
+              Profesional en DevOps con formación en desarrollo de software y experiencia sólida en operaciones de TI. Integro conocimientos de programación con la gestión de infraestructura para automatizar procesos, mejorar la eficiencia operativa y garantizar despliegues continuos, seguros y escalables.
+
+Tengo experiencia trabajando con pipelines CI/CD, contenedores, orquestación con Kubernetes, automatización con Ansible o Terraform, y herramientas de monitoreo. Mi enfoque combina el desarrollo ágil con la estabilidad y seguridad de los entornos productivos, promoviendo la colaboración entre equipos y la entrega continua de valor.
               </p>
             </div>
             <Facts />
