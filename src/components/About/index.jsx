@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import "./About.css"
-import { profile2 } from '../../images/profile-2.jpg'
+import { profile2 } from '../../images'
 import gsap from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
 
