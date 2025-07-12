@@ -398,7 +398,7 @@ The system is capable of sorting waste in real time and autonomously.`,
     {
       id:14,
       title: 'NAS to Raspberry Pi',
-      image: '/images/projectsImages/profile-2.png',
+      image: '/images/projectsImages/NAStoRaspberry.png',
       category:"Infrastructure",
       data:{
         description: 
