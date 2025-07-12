@@ -22,12 +22,13 @@ export const projects = [
       image: '/images/projectsImages/smartset.png',
       category:"Engineering",
       data:{
-         description: `Participation in an important project within the IoT engineering field. A technological product was implemented that self-manages the telecommunications of the physical medium for energy consumption from single-phase and three-phase meters.
-It is capable of performing accurate monitoring of the supply network as well as physical variables. It creates a BLE Mesh and Thread network for PAN communications and connects to a broader LAN/WAN network through the use of 5G LTE and NBIoT.
-In its simplest form, SmartSET deploys a local wireless network that allows it to collect information from sensors associated with a distribution transformer substation.
-In this way, all electrical parameters (energy, power, voltage, currents, THD, etc.) are acquired at the transformer output terminals, along with the cooling oil temperature, ambient temperature and humidity, and all electrical parameters at each SET output.
-All this information is collected by an integrated management unit. (UIG), which stores it in a local database, organized by sensor group, and keeps a temporary record of each acquired data.
-To facilitate access to this information, SmartSET has an embedded web page that can be accessed locally with any mobile device via a Wi-Fi connection. This allows maintenance operators to access information on the current status of the SET as well as evaluate the system's historical records.  `,
+         description: 
+         `Participation in an important project within the IoT engineering field. A technological product was implemented that self-manages the telecommunications of the physical medium for energy consumption from single-phase and three-phase meters.
+          It is capable of performing accurate monitoring of the supply network as well as physical variables. It creates a BLE Mesh and Thread network for PAN communications and connects to a broader LAN/WAN network through the use of 5G LTE and NBIoT.
+          In its simplest form, SmartSET deploys a local wireless network that allows it to collect information from sensors associated with a distribution transformer substation.
+          In this way, all electrical parameters (energy, power, voltage, currents, THD, etc.) are acquired at the transformer output terminals, along with the cooling oil temperature, ambient temperature and humidity, and all electrical parameters at each SET output.
+          All this information is collected by an integrated management unit. (UIG), which stores it in a local database, organized by sensor group, and keeps a temporary record of each acquired data.
+          To facilitate access to this information, SmartSET has an embedded web page that can be accessed locally with any mobile device via a Wi-Fi connection. This allows maintenance operators to access information on the current status of the SET as well as evaluate the system's historical records.  `,
          demoLink: "https://google.com/",
       },
       stack:[
@@ -56,7 +57,13 @@ To facilitate access to this information, SmartSET has an embedded web page that
       image: '/images/projectsImages/THT.jpg',
       category:"Engineering",
       data:{
-        description:`The Humidity and Temperature Measurement Unit is a module designed to acquire environmental data from the distribution transformer environment. This unit is based on Microelectromechanical Systems (MEMS) technology to acquire and record ambient temperature and humidity. It also features a port for connecting a remote PT100 probe to measure the temperature of the transformer's cooling oil. The MEMs probe transmits information to the unit digitally, allowing it to be freely exchanged for others using the same technology without requiring any adjustments. The PT100 probe uses a 3-wire configuration to automatically compensate for the length of the cable used in the installation, thanks to its internal signal amplification. Finally, this module also features Bluetooth and NFC connectivity to allow for integration into the Smart-SET platform. `,
+        description:
+        `The Humidity and Temperature Measurement Unit is a module designed to acquire environmental data from the distribution transformer environment. 
+        This unit is based on Microelectromechanical Systems (MEMS) technology to acquire and record ambient temperature and humidity. 
+        It also features a port for connecting a remote PT100 probe to measure the temperature of the transformer's cooling oil. 
+        The MEMs probe transmits information to the unit digitally, allowing it to be freely exchanged for others using the same technology without requiring any adjustments. 
+        The PT100 probe uses a 3-wire configuration to automatically compensate for the length of the cable used in the installation, thanks to its internal signal amplification. 
+        Finally, this module also features Bluetooth and NFC connectivity to allow for integration into the Smart-SET platform. `,
         demoLink: "https://google.com/",
       },
       stack:[
@@ -85,8 +92,11 @@ To facilitate access to this information, SmartSET has an embedded web page that
       image: '/images/projectsImages/UPS.jpg',
       category:"Engineering",
       data:{
-        description: `Uninterruptible power supply (UPS) capable of maintaining power to an SBC (e.g., Raspberry Pi) and accessory components during a primary power supply absence. It monitors HOST operation, functioning as a "WatchDOG." This device is responsible for performing a "Hard Reset" of the SBC if it is deemed out of service.
-Within the Smart Set System, it is responsible for ensuring proper power supply and monitoring the TEA and UIG modules. It can be used in other industrial systems as an uninterruptible power supply with DIN rail mounting. `,
+        description: 
+        `Uninterruptible power supply (UPS) capable of maintaining power to an SBC (e.g., Raspberry Pi) and accessory components during a primary power supply absence. 
+        It monitors HOST operation, functioning as a "WatchDOG." This device is responsible for performing a "Hard Reset" of the SBC if it is deemed out of service.
+        Within the Smart Set System, it is responsible for ensuring proper power supply and monitoring the TEA and UIG modules. 
+        It can be used in other industrial systems as an uninterruptible power supply with DIN rail mounting. `,
         demoLink: "https://google.com/",
       },
       stack:[
@@ -115,9 +125,10 @@ Within the Smart Set System, it is responsible for ensuring proper power supply 
       image: '/images/projectsImages/TEA.jpg',
       category:"Engineering",
       data:{
-        description: `The Power Transformer Measurement Unit (TEA) is a module designed to acquire electrical data from the distribution transformer.
-This unit uses Microelectromechanical Systems (MEMs) technology to acquire and record ambient temperature and humidity.
-It also features a port for connecting a remote PT100 probe to measure the temperature of the transformer's cooling oil.`,
+        description: 
+        `The Power Transformer Measurement Unit (TEA) is a module designed to acquire electrical data from the distribution transformer.
+        This unit uses Microelectromechanical Systems (MEMs) technology to acquire and record ambient temperature and humidity.
+        It also features a port for connecting a remote PT100 probe to measure the temperature of the transformer's cooling oil.`,
         },
       demoLink: "https://google.com/",
       stack:[
@@ -146,7 +157,10 @@ It also features a port for connecting a remote PT100 probe to measure the tempe
       image: '/images/projectsImages/POW.jpg',
       category:"Engineering",
       data:{
-        description: `POW is part of a remote measurement system composed of sensors and communication systems that can function as a standalone module in other types of systems and installations, serving as a power supply. Its main feature is its very wide operating range (60-440 V AC). Its main function is to provide power to the various components of the Smart Set system: the UIG, TEA, and UAS for Temperature and Humidity. `,
+        description: 
+        `POW is part of a remote measurement system composed of sensors and communication systems that can function as a standalone module in other types of systems and installations, serving as a power supply. 
+        Its main feature is its very wide operating range (60-440 V AC). 
+        Its main function is to provide power to the various components of the Smart Set system: the UIG, TEA, and UAS for Temperature and Humidity. `,
         },
       demoLink: "https://google.com/",
       stack:[
@@ -206,8 +220,9 @@ The system is capable of sorting waste in real time and autonomously.`,
       image: '/images/projectsImages/portfolio-react.png',
       category:"Development",
       data:{
-        description: `Personal web portfolio, designed to showcase my skills and completed projects, with the option to contact me via the contact form and view my social media accounts.
-It was developed with React and Tailwind and published on Vercel Hosting.`,
+        description: 
+        `Personal web portfolio, designed to showcase my skills and completed projects, with the option to contact me via the contact form and view my social media accounts.
+        It was developed with React and Tailwind and published on Vercel Hosting.`,
         demoLink: `https://github.com/Pablo2205/Portfolio-New`,
       },
       stack:[
@@ -235,7 +250,10 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
       image: '/images/projectsImages/IBMPR1.jpg',
       category:"Development",
       data:{
-        description: `This project is part of the IBM DevOps and Software Development Professional Certificate. It involves creating a web application that allows users to manage their tasks, including adding, editing, and deleting tasks. The application is built using Python, Flask, and MongoDB, and it is deployed on IBM Cloud.`,
+        description: 
+        `This project is part of the IBM DevOps and Software Development Professional Certificate. 
+        It involves creating a web application that allows users to manage their tasks, including adding, editing, and deleting tasks. 
+        The application is built using Python, Flask, and MongoDB, and it is deployed on IBM Cloud.`,
         demoLink: "https://google.com/",
       },
       stack:[
@@ -263,7 +281,9 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
       image: '/images/projectsImages/WheaterApp.png',
       category:"Development",
       data:{
-        description: `A web program capable of displaying the current weather in a city, with the ability to view the weather for the next 5 days, including temperature, humidity, wind, and the probability of rain.`,
+        description: 
+        `A web program capable of displaying the current weather in a city, with the ability to view the weather for the next 5 days, i
+        including temperature, humidity, wind, and the probability of rain.`,
         demoLink: "https://google.com/",
       },
       stack:[
@@ -287,7 +307,9 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
       image: '/images/projectsImages/PasswordGenerate.png',
       category:"Development",
       data:{
-        description: `Web program for generating random secure keys, allowing you to select the complexity by selecting the length and characters used. It also allows users to copy the keys to the clipboard.`,
+        description: 
+        `Web program for generating random secure keys, allowing you to select the complexity by selecting the length and characters used. 
+        It also allows users to copy the keys to the clipboard.`,
         demoLink: "https://google.com/",
       },
       stack:[
@@ -303,7 +325,8 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
       image: '/images/projectsImages/Calculator.png',
       category:"Development",
       data:{
-        description: `A simple yet efficient scientific calculator program, with all the basic functions of a scientific calculator, with the ability to perform basic operations.`,
+        description: 
+        `A simple yet efficient scientific calculator program, with all the basic functions of a scientific calculator, with the ability to perform basic operations.`,
         demoLink: "https://google.com/",
       },
       stack:[
@@ -328,7 +351,8 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
       image: '/images/projectsImages/veeam365-flow.png',
       category:"Infrastructure",
       data:{
-        description: `Implementation of the world's leading backup and restore orchestrator, using Veeam Backup for Microsoft 365 as the central orchestrator for managing backups and restores of Microsoft 365 applications within a business environment with more than 150 users.`,
+        description: 
+        `Implementation of the world's leading backup and restore orchestrator, using Veeam Backup for Microsoft 365 as the central orchestrator for managing backups and restores of Microsoft 365 applications within a business environment with more than 150 users.`,
         demoLink: "https://google.com/",
       },
       stack:[
@@ -352,7 +376,8 @@ It was developed with React and Tailwind and published on Vercel Hosting.`,
       image: '/images/projectsImages/portalusers.png',
       category:"Infrastructure",
       data:{
-        description: `User portal for managing incidents and technical support requests. The interface allows users to open a technical support ticket, view the status of open tickets, view the history of closed tickets, and download manuals and user guides.`,
+        description: 
+        `User portal for managing incidents and technical support requests. The interface allows users to open a technical support ticket, view the status of open tickets, view the history of closed tickets, and download manuals and user guides.`,
         demoLink: "https://google.com/",
       },
       stack:[
