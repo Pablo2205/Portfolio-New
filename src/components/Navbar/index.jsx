@@ -1,13 +1,12 @@
 import React,{useEffect, useState,useRef} from 'react'
 import "./Navbar.css"
-import { SiWebmoney } from "react-icons/si";
+// import { SiWebmoney } from "react-icons/si"; // Eliminado porque el logo ya no se usa
 import {menu} from "../../data"
 import { Link,animateScroll as scroll } from 'react-scroll';
 import {FaArrowUpRightFromSquare,FaBarsStaggered} from "react-icons/fa6"
 import { FaTimes } from 'react-icons/fa';
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react';
-
 
 const Navbar = () => {
   const [showSidebar,setShowSidebar] = useState(false);
@@ -42,7 +41,6 @@ const Navbar = () => {
      }
    },[visible])
 
-
    useGSAP(()=>{
     const timeline = gsap.timeline();
     timeline.from(".tab__item",{opacity:0,stagger:.5})
@@ -55,9 +53,10 @@ const Navbar = () => {
           <div className='overlay' onClick={()=>setShowSidebar(!showSidebar)}></div>
         ):""
       }
-      <div className="logo__container" onClick={()=>scroll.scrollToTop({duration:500})}>
+      {/* Logo eliminado */}
+      {/* <div className="logo__container" onClick={()=>scroll.scrollToTop({duration:500})}>
         <SiWebmoney/>
-      </div>
+      </div> */}
       <div className={`tab__group ${showSidebar ? 'show':''}`}>
         <span className="icon__container close__btn" onClick={()=>setShowSidebar(!showSidebar)}>
           <FaTimes/>
@@ -80,7 +79,8 @@ const Navbar = () => {
           }
       </div>
       <div className="nav__buttons__group">
-         <button className='btn btn__primary'>Hire Me <FaArrowUpRightFromSquare/></button>
+         {/* Botón Hire Me eliminado */}
+         {/* <button className='btn btn__primary'>Hire Me <FaArrowUpRightFromSquare/></button> */}
          <FaBarsStaggered className="menu" onClick={()=>setShowSidebar(!showSidebar)}/>
       </div>
     </nav>
