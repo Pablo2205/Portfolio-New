@@ -1,7 +1,7 @@
 .navbar__container{
     display: flex;
     align-items: stretch;
-    justify-content: space-between;
+    justify-content: center; /* CENTRA el contenido del navbar */
     padding: 20px;
     position: relative;
     width: 100%;
@@ -12,19 +12,12 @@
     position: sticky;
 }
 
-
-.navbar__container .logo__container{
-    display: flex;
-    align-items: flex-end;
-    gap: 15px;
-    cursor: pointer;
-    font-size: 35px;
-}
+/* El logo ya no es necesario, puedes dejarlo o quitarlo si prefieres */
 
 .navbar__container .tab__group{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* CENTRA los tabs horizontalmente */
     gap: 20px;
 }
 
@@ -56,10 +49,9 @@
     }
 }
 
+/* Oculta grupo de botones de navegación para escritorio si no hay elementos */
 .navbar__container .nav__buttons__group{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    display: none;
 }
 
 .navbar__container .menu{
@@ -117,5 +109,8 @@
     }
     .navbar__container .close__btn{
         display: flex;
+    }
+    .navbar__container .nav__buttons__group{
+        display: flex; /* Si necesitas el menú hamburguesa en móvil */
     }
 }
