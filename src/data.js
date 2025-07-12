@@ -395,6 +395,31 @@ The system is capable of sorting waste in real time and autonomously.`,
         }
       ]
     },
+    {
+      id:14,
+      title: 'NAS to Raspberry Pi',
+      image: '/images/projectsImages/profile-2.png',
+      category:"Infrastructure",
+      data:{
+        description: 
+        `Build a low-cost, low-power network attached storage (NAS) system using a Raspberry Pi, allowing file sharing between multiple devices connected to a local network or even remotely.`,
+        demoLink: "https://github.com/Pablo2205/NAS-Server-with-Raspberry-Pi",
+      },
+      stack:[
+        {
+          name:"Raspberry",
+          svgIcon: "/images/raspberry.svg",
+        },
+        {
+          name:"Python",
+          svgIcon: "/images/python.svg",
+        },
+        {
+          name:"GitHub",
+          svgIcon: "/images/github.svg",
+        }
+      ]
+    },
   ];
 
 export const experience = [
