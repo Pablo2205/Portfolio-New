@@ -11,9 +11,8 @@ const Contact = () => {
         <div className="section__header">
           <h2 className="primary__title">Contact Me</h2>
           <p className="text__muted description">
-          ¿Listo para llevar tu infraestructura y desarrollo al siguiente nivel? Ya sea que necesites lanzar un nuevo proyecto, optimizar tu entorno actual o contar con asesoramiento especializado en tecnologías DevOps, estoy para ayudarte.
-Contáctame y conversemos sobre cómo hacer realidad tus ideas con soluciones eficientes, seguras y escalables.
-
+          Ready to take your infrastructure and development to the next level? Whether you need to launch a new project, optimize your current environment, or require specialized advice on DevOps technologies, 
+          I'm here to help. Contact me and let's discuss how to bring your ideas to life with efficient, secure, and scalable solutions.
 
           </p>
         </div>
