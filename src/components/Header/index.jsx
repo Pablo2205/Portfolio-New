@@ -59,14 +59,15 @@ const Header = () => {
         <div className="column intro__container blur-effect">
           <div className="header__info">
             <div className="header__info__top">
-              Hola, soy <span className="color__primary">Pablo</span>
+              Hello, I am <span className="color__primary">Pablo</span>
             </div>
             <div className="header__info__middle">
               <h1 className="primary__title header__title">DevOps Engineer</h1>
               <p className="text__muted header__description">
-              Profesional en DevOps con formación en desarrollo de software y experiencia sólida en operaciones de TI. Integro conocimientos de programación con la gestión de infraestructura para automatizacion y mejora de procesos y despliegues continuos, seguros y escalables.
-              Tengo experiencia trabajando con pipelines CI/CD, contenedores, orquestadores, automatización y despliegues de Infraestriuctura como codigo, y herramientas de monitoreo. 
-              Mi enfoque combina el desarrollo ágil con la estabilidad y seguridad de los entornos productivos, promoviendo la colaboración entre equipos y la entrega continua de valor.
+              DevOps professional with a background in software development and solid experience in IT operations. 
+              I integrate programming knowledge with infrastructure management for automation and improvement of processes and continuous, secure, and scalable deployments. 
+              I have experience working with CI/CD pipelines, containers, orchestrators, automation, and Infrastructure as Code deployments, as well as monitoring tools. 
+              My approach combines agile development with the stability and security of production environments, promoting collaboration between teams and the continuous delivery of value.
               </p>
             </div>
             <Facts />
