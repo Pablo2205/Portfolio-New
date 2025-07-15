@@ -32,10 +32,10 @@ const About = () => {
         </div>
         <div className="section__header">
           <h2 className="primary__title">About Me</h2>
-          <h1 className="title">Mi nombre es <span className="color__primary">Pablo Coria</span></h1>
+          <h1 className="title">My name is <span className="color__primary">Pablo Coria</span></h1>
           <p className="text__muted description">
-          Soy estudiante de Sistemas, con interés en el desarrollo de soluciones tecnológicas eficientes y funcionales. Tengo experiencia trabajando con diversos lenguajes de programación y frameworks, así como en el diseño y administración de bases de datos, sistemas automatizados, productos tecnológicos y servicios de software.
-          Me destaco por mis habilidades analíticas y de resolución de problemas, y he participado en proyectos relacionados con la ingeniería IoT y la infraestructura IT, integrando conocimientos técnicos con un enfoque práctico.
+          I am a Systems student, interested in the development of efficient and functional technological solutions. I have experience working with various programming languages and frameworks, as well as in the design and management of databases, automated systems, technological products, and software services. 
+          I stand out for my analytical and problem-solving skills, and I have participated in projects related to IoT engineering and IT infrastructure, integrating technical knowledge with a practical approach.
           </p>
         </div>
       </div>
