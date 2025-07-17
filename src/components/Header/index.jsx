@@ -4,7 +4,7 @@ import { profile1 } from "../../images";
 import Facts from './Facts';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';  // Importa los íconos de GitHub y LinkedIn
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 const Header = () => {
   const container = useRef(null);
@@ -62,7 +62,7 @@ const Header = () => {
               Hello, I am <span className="color__primary">Pablo</span>
             </div>
             <div className="header__info__middle">
-              <h1 className="primary__title header__title">DevOps Engineer</h1>
+              <h1 className="primary__title header__title">Infraestructure Administrator</h1>
               <p className="text__muted header__description">
               DevOps professional with a background in software development and solid experience in IT operations. 
               I integrate programming knowledge with infrastructure management for automation and improvement of processes and continuous, secure, and scalable deployments. 
@@ -83,8 +83,6 @@ const Header = () => {
           <div className="profile__photo__container">
             <img src={profile1} className='profile__photo' alt="" />
           </div>
-
-          {/* Aquí agregamos los íconos de redes sociales */}
           <div className="social-icons">
             <a href="https://github.com/Pablo2205" target="_blank" rel="noopener noreferrer">
               <AiFillGithub size={30} />
