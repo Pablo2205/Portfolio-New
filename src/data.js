@@ -478,6 +478,36 @@ export const experience = [
           },
       ],
   },
+    {
+    title: "Data Bases",
+      data: [
+          {
+              skill: "MS SQL",
+              level: "Experienced",
+              svgIcon: "/images/sql-server.svg",
+          },
+          {
+              skill: "MySQL",
+              level: "Intermediate",
+              svgIcon: "/images/mysql.svg",
+          },
+          {
+              skill: "PostgreSQL",
+              level: "Intermediate",
+              svgIcon: "/images/postgresql.svg",
+          },
+          {
+            skill: "MongoDB",
+              level: "Basic",
+              svgIcon: "/images/mongodb.svg",
+          },
+          {
+            skill: "SQLite",
+              level: "Basic",
+              svgIcon: "/images/sqlite.svg",
+          },
+      ],
+  },    
   {
     title: "Infraestructures",
       data: [
@@ -510,41 +540,6 @@ export const experience = [
               skill: "PowerShell Scripting",
               level: "Intermediate",
               svgIcon: "/images/powershell.svg",
-          },
-      ],
-  },
-  {
-    title: "Databases",
-      data: [
-          {
-              skill: "MS SQL",
-              level: "Experienced",
-              svgIcon: "/images/sql-server.svg",
-          },
-          {
-              skill: "MySQL",
-              level: "Intermediate",
-              svgIcon: "/images/mysql.svg",
-          },
-          {
-              skill: "PostgreSQL",
-              level: "Intermediate",
-              svgIcon: "/images/postgresql.svg",
-          },
-          {
-              skill: "Oracle SQL",
-              level: "Basic",
-              svgIcon: "/images/oracle.svg",
-          },
-          {
-            skill: "MongoDB",
-              level: "Basic",
-              svgIcon: "/images/mongodb.svg",
-          },
-          {
-            skill: "SQLite",
-              level: "Basic",
-              svgIcon: "/images/sqlite.svg",
           },
       ],
   },
@@ -630,11 +625,6 @@ export const experience = [
               skill: "Kubernetes",
               level: "Basic",
               svgIcon: "/images/kuber.svg",
-          },
-          {
-              skill: "OpenShift",
-              level: "Basic",
-              svgIcon: "/images/openshift.svg",
           },
           {
               skill: "Jenkins",
