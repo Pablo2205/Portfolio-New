@@ -75,7 +75,7 @@ const Services = () => {
                 <div className="icon__container">
                   <BsCodeSquare className="icon"/>
                 </div>
-                <h3 className="title">Development</h3>
+                <h3 className="title">Software</h3>
               </div>
               <div className="service__middle">
                 <p className="text__muted description">
@@ -93,7 +93,7 @@ const Services = () => {
                 <div className="icon__container">
                   <SiSecurityscorecard className="icon"/>
                 </div>
-                <h3 className="title">Dev Sec Ops</h3>
+                <h3 className="title">Cloud & IoT</h3>
               </div>
               <div className="service__middle">
                 <p className="text__muted description">

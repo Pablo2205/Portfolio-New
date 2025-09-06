@@ -62,7 +62,7 @@ const Header = () => {
               Hello, I am <span className="color__primary">Pablo</span>
             </div>
             <div className="header__info__middle">
-              <h1 className="primary__title header__title">Infraestructure Administrator</h1>
+              <h1 className="primary__title header__title">Software Engenieer</h1>
               <p className="text__muted header__description">
               DevOps professional with a background in software development and solid experience in IT operations. 
               I integrate programming knowledge with infrastructure management for automation and improvement of processes and continuous, secure, and scalable deployments. 
