@@ -80,7 +80,7 @@
 
 #header .profile__photo__container {
     width: 500px; /* Imagen más chica */
-    max-width: 100%;
+    max-width: 150%;
     position: relative;
     margin: auto;
     overflow: hidden;
