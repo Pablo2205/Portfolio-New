@@ -1,29 +1,84 @@
-<<<<<<< HEAD
-# Portfolio_React
-=======
-# Getting Started with Create React App
+# 🌟 Mi Portfolio Personal
 
-## Available Scripts
+[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/) 
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) 
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-In the project directory, you can run:
+Bienvenido a mi **Portfolio Personal**, construido con **React** y **TailwindCSS**, desplegado en **Vercel**. Aquí encontrarás mis proyectos, habilidades y experiencia profesional.  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🖥️ Vista Previa
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="1479" height="915" alt="Screenshot 2025-09-05 at 22 58 21" src="https://github.com/user-attachments/assets/041118c4-27d5-4b21-b708-3c335378753c" />
 
-### `npm test`
+🔗 **Live Demo:** https://vercel.com/pablo2205s-projects/portfolio-new/2TX68ZhxMgqwsUvcybXWdVYETQTP
 
-Launches the test runner in the interactive watch mode.\
+---
 
-### `npm run build`
+## ⚡ Características
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Diseño **responsive** para móvil, tablet y desktop 📱💻
+- Sección de **Proyectos** con demos y enlaces a GitHub 🛠️
+- Sección de **Experiencia y Certificaciones** 🎓
+- Íconos interactivos de **Redes Sociales** 🌐
+- Temas **claro/oscuro** (si está implementado) 🌞🌙
+- Despliegue automático en **Vercel** ☁️
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
+## 🚀 Tecnologías
+
+- **React** ⚛️ – Biblioteca moderna para construir interfaces.
+- **TailwindCSS** 🎨 – Framework CSS para desarrollo rápido y responsivo.
+- **Vercel** ☁️ – Hosting y despliegue continuo.
+- **React Icons** 🖌️ – Íconos para mejorar la experiencia visual.
+- **Node.js & npm** 🟢 – Para manejo de dependencias y scripts.
+
+---
+
+## 📂 Estructura del Proyecto
+
+mi-portfolio/
+├─ public/ # Archivos estáticos (images, favicon)
+├─ src/
+│ ├─ components/ # Componentes React
+│ ├─ pages/ # Páginas del portfolio
+│ ├─ assets/ # Imágenes, íconos, logos
+│ └─ App.jsx
+├─ tailwind.config.js
+├─ package.json
+└─ README.md
+
+
+---
+
+## ⚙️ Instalación y Uso Local
+
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/tu-usuario/mi-portfolio.git
+cd mi-portfolio
+
+
+Instalar dependencias
+
+npm install
+
+
+Ejecutar en modo desarrollo
+
+npm start
+
+
+Abre http://localhost:3000
+ en tu navegador.
+
+Recarga automática al guardar cambios.
+
+Generar build de producción
+
+npm run build
+
+
+Optimiza la app y crea los archivos listos para producción en build/.
