@@ -22,7 +22,6 @@ Bienvenido a mi **Portfolio Personal**, construido con **React** y **TailwindCSS
 - Sección de **Proyectos** con demos y enlaces a GitHub 🛠️
 - Sección de **Experiencia y Certificaciones** 🎓
 - Íconos interactivos de **Redes Sociales** 🌐
-- Temas **claro/oscuro** (si está implementado) 🌞🌙
 - Despliegue automático en **Vercel** ☁️
 
 ---
