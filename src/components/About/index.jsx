@@ -34,8 +34,8 @@ const About = () => {
           <h2 className="primary__title">About Me</h2>
           <h1 className="title">My name is <span className="color__primary">Pablo Coria</span></h1>
           <p className="text__muted description">
-          I am a Systems student, interested in the development of efficient and functional technological solutions. I have experience working with various programming languages and frameworks, as well as in the design and management of databases, automated systems, technological products, and software services. 
-          I stand out for my analytical and problem-solving skills, and I have participated in projects related to IoT engineering and IT infrastructure, integrating technical knowledge with a practical approach.
+          I am a software development specialist with extensive experience in C, C++, and embedded systems, as well as in IoT and telecommunications projects. 
+          My academic background includes an associate's degree in electronics, a university associate's degree in programming, and I am currently pursuing a degree in Computer Engineering with a specialization in microcontroller software development.
           </p>
         </div>
       </div>

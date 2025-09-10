@@ -64,10 +64,10 @@ const Header = () => {
             <div className="header__info__middle">
               <h1 className="primary__title header__title">Software Engenieer</h1>
               <p className="text__muted header__description">
-              DevOps professional with a background in software development and solid experience in IT operations. 
-              I integrate programming knowledge with infrastructure management for automation and improvement of processes and continuous, secure, and scalable deployments. 
-              I have experience working with CI/CD pipelines, containers, orchestrators, automation, and Infrastructure as Code deployments, as well as monitoring tools. 
-              My approach combines agile development with the stability and security of production environments, promoting collaboration between teams and the continuous delivery of value.
+              Software Engineer with expertise in application development, infrastructure integration, and IoT/Cloud solutions. 
+              I design and implement scalable, secure, and efficient software by combining strong programming skills with knowledge of system architectures and modern deployment practices. 
+              My experience includes developing web, desktop, and embedded applications, as well as integrating cloud services and connected devices. 
+              I follow agile methodologies and software engineering best practices to deliver reliable, maintainable, and high-quality solutions that align with business needs.
               </p>
             </div>
             <Facts />

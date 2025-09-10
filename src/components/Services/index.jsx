@@ -47,8 +47,10 @@ const Services = () => {
           <div className="section__header center">
             <h2 className="primary__title">Services</h2>
             <p className="text__muted description">
-            I transform technological challenges into automated and efficient solutions. 
-            I offer services focused on DevOps practices, including infrastructure management, deployment automation, continuous integration and delivery (CI/CD), software development, and IT security hardening.           </p>
+            I transform technological challenges into scalable and efficient software solutions. 
+            I offer services focused on full-stack development, infrastructure integration, IoT and cloud solutions, and process automation. 
+            My work combines robust software architectures, embedded systems, and cloud deployments to deliver secure, maintainable, and high-performance solutions aligned with business needs.
+                       </p>
           </div>
 
           <div className="services__group">
@@ -61,9 +63,9 @@ const Services = () => {
               </div>
               <div className="service__middle">
                 <p className="text__muted description">
-                I offer comprehensive infrastructure management and automation services, focused on maximizing the performance, availability, and security of your systems.
-                I implement infrastructure as code (IaC) practices to manage physical, virtual, and cloud servers efficiently and repeatably. 
-                I also incorporate continuous monitoring solutions, immutable backups, and protective measures that ensure the integrity of your data and the stability of your operations.
+                I provide comprehensive infrastructure management and automation services, focused on maximizing the performance, availability, and security of your systems. 
+                I implement Infrastructure as Code (IaC) practices to manage physical, virtual, and cloud servers efficiently and repeatably. 
+                I also integrate continuous monitoring solutions, immutable backups, and protective measures, ensuring data integrity, operational stability, and smooth support for software deployments.
                 </p>
               </div>
               <div className="service__bottom">
@@ -79,9 +81,9 @@ const Services = () => {
               </div>
               <div className="service__middle">
                 <p className="text__muted description">
-                I offer backend development services with a DevOps approach, combining the creation of robust and scalable architectures with continuous integration and continuous delivery (CI/CD) practices.
-                I develop efficient and secure APIs, facilitating the integration of complex systems and improving the functionality of your applications. 
-                The entire process is aligned with best practices for automation, testing, version control, and deployment, ensuring agile, reliable, and production-ready development.
+                I offer backend and embedded systems development services with a focus on robust, scalable, and secure architectures. 
+                I develop applications for web, desktop, and IoT environments, following best practices in automation, testing, version control, and deployment. 
+                The process ensures agile, reliable, and production-ready software that integrates seamlessly with existing infrastructure.
                 </p>
               </div>
               <div className="service__bottom">
@@ -97,9 +99,9 @@ const Services = () => {
               </div>
               <div className="service__middle">
                 <p className="text__muted description">
-                 I integrate security from the earliest stages of development, applying DevSecOps practices to identify and mitigate risks before going live.
-                 I offer services that include vulnerability scanning, automated testing, code scanning (SAST/DAST), and security audits tailored to CI/CD environments.
-                 I implement access controls, secrets management, and hardening measures, ensuring that your applications and systems comply with security standards without compromising development agility.              
+                 I design and implement connected systems and cloud solutions that bridge hardware and software, enabling real-time data collection, processing, and actionable insights. 
+                 My services include IoT device development, embedded programming, cloud integration (AWS, Azure), containerization, and scalable application deployment. 
+                 I focus on delivering secure, maintainable, and optimized solutions leveraging modern cloud and edge computing technologies.
                 </p>
               </div>
               <div className="service__bottom">
