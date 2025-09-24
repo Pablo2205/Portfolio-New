@@ -90,21 +90,27 @@ img{
 .btn{
     padding: 15px 25px;
     border-radius: var(--border-radius-5);
-    color: var(--color-text);
+    color: var(--color-white);
     display: inline-block;
     font-size: 14px;
     font-weight: 500;
-    background: var(--color-ui-2);
+    background: linear-gradient(to right, var(--color-primary) 0%, #10b981 50%, #34d399 100%);
+    background-size: 200% auto;
     text-align: center;
     cursor: pointer;
+    transition: var(--transition);
 }
 
 
 .btn__primary {
-    background: var(--gradient-1);
+    background: linear-gradient(to right, var(--color-primary) 0%, #10b981 50%, #34d399 100%);
     color: var(--color-white);
     background-size: 200% auto;
     transition: var(--transition); 
+}
+
+.btn:hover{
+    background-position: right center;
 }
 
 .btn__primary:hover{

@@ -112,7 +112,8 @@
 }
 
 .btn {
-    background-color: var(--color-primary);
+    background: linear-gradient(to right, var(--color-primary) 0%, #10b981 50%, #34d399 100%);
+    background-size: 200% auto;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -121,11 +122,11 @@
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: var(--transition);
 }
 
 .btn:hover {
-    background-color: var(--color-success);
+    background-position: right center;
 }
 
 .social-icons {
