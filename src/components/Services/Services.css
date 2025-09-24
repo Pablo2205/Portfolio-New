@@ -56,6 +56,7 @@
 
 #services .service .service__top{
     display: flex;
+    align-items: center;
     margin-bottom: 20px;
     position: relative;
 }
@@ -63,9 +64,13 @@
 
 #services .icon__container{
     width: 80px;
+    height: 80px;
     background: var(--color-ui-2);
     border: solid 1px var(--color-primary);
     margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #services .service .icon{
@@ -75,10 +80,13 @@
 
 #services .service .title{
     font-size: 25px;
-    background: linear-gradient(to right, var(--color-primary) 0%, var(--color-white) 100%);
+    background: linear-gradient(to right, var(--color-primary) 0%, #10b981 50%, #34d399 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    display: flex;
+    align-items: center;
+    height: 80px;
 }
 
 #services .service .description{
