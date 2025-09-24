@@ -284,7 +284,7 @@ The system is capable of sorting waste in real time and autonomously.`,
         description: 
         `A web program capable of displaying the current weather in a city, with the ability to view the weather for the next 5 days, i
         including temperature, humidity, wind, and the probability of rain.`,
-        demoLink: "https://google.com/",
+        demoLink: "https://github.com/Pablo2205/Wheater-App",
       },
       stack:[
         {
@@ -310,7 +310,7 @@ The system is capable of sorting waste in real time and autonomously.`,
         description: 
         `Web program for generating random secure keys, allowing you to select the complexity by selecting the length and characters used. 
         It also allows users to copy the keys to the clipboard.`,
-        demoLink: "https://google.com/",
+        demoLink: "https://github.com/Pablo2205/Password-Generator",
       },
       stack:[
         {
@@ -327,7 +327,7 @@ The system is capable of sorting waste in real time and autonomously.`,
       data:{
         description: 
         `A simple yet efficient scientific calculator program, with all the basic functions of a scientific calculator, with the ability to perform basic operations.`,
-        demoLink: "https://google.com/",
+        demoLink: "https://github.com/Pablo2205/Scientific-Calculator",
       },
       stack:[
         {
@@ -353,7 +353,7 @@ The system is capable of sorting waste in real time and autonomously.`,
       data:{
         description: 
         `Implementation of the world's leading backup and restore orchestrator, using Veeam Backup for Microsoft 365 as the central orchestrator for managing backups and restores of Microsoft 365 applications within a business environment with more than 150 users.`,
-        demoLink: "https://google.com/",
+        demoLink: "https://github.com/Pablo2205/Veeam-Backup-for-Microsoft-365",
       },
       stack:[
         {
@@ -378,7 +378,7 @@ The system is capable of sorting waste in real time and autonomously.`,
       data:{
         description: 
         `User portal for managing incidents and technical support requests. The interface allows users to open a technical support ticket, view the status of open tickets, view the history of closed tickets, and download manuals and user guides.`,
-        demoLink: "https://google.com/",
+        demoLink: "https://github.com/Pablo2205/Portal-from-user-HelpDesk-IT",
       },
       stack:[
         {
