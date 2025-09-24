@@ -61,8 +61,10 @@
 }
 
 #header .header__title {
+    font-family: 'Inter', sans-serif;
     font-size: 62px;
-    font-weight: 900;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 #header .header__description {
