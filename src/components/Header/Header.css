@@ -110,7 +110,7 @@
 }
 
 .btn {
-    background-color: #3b82f6;
+    background-color: var(--color-primary);
     border: none;
     color: white;
     padding: 10px 20px;
@@ -123,7 +123,7 @@
 }
 
 .btn:hover {
-    background-color: #0e8b64;
+    background-color: var(--color-success);
 }
 
 .social-icons {
@@ -138,7 +138,7 @@
 }
 
 .social-icons a:hover {
-    color: #3b82f6;
+    color: var(--color-primary);
 }
 
 @media (max-width:1100px) {
