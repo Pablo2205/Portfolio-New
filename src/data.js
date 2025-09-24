@@ -29,7 +29,7 @@ export const projects = [
           In this way, all electrical parameters (energy, power, voltage, currents, THD, etc.) are acquired at the transformer output terminals, along with the cooling oil temperature, ambient temperature and humidity, and all electrical parameters at each SET output.
           All this information is collected by an integrated management unit. (UIG), which stores it in a local database, organized by sensor group, and keeps a temporary record of each acquired data.
           To facilitate access to this information, SmartSET has an embedded web page that can be accessed locally with any mobile device via a Wi-Fi connection. This allows maintenance operators to access information on the current status of the SET as well as evaluate the system's historical records.  `,
-         demoLink: "https://google.com/",
+        demoLink: "https://github.com/Pablo2205/SmartSet-Project",
       },
       stack:[
         {
@@ -64,7 +64,7 @@ export const projects = [
         The MEMs probe transmits information to the unit digitally, allowing it to be freely exchanged for others using the same technology without requiring any adjustments. 
         The PT100 probe uses a 3-wire configuration to automatically compensate for the length of the cable used in the installation, thanks to its internal signal amplification. 
         Finally, this module also features Bluetooth and NFC connectivity to allow for integration into the Smart-SET platform. `,
-        demoLink: "https://google.com/",
+        demoLink: "https://github.com/Pablo2205/UAS-THT",
       },
       stack:[
         {
@@ -97,7 +97,7 @@ export const projects = [
         It monitors HOST operation, functioning as a "WatchDOG." This device is responsible for performing a "Hard Reset" of the SBC if it is deemed out of service.
         Within the Smart Set System, it is responsible for ensuring proper power supply and monitoring the TEA and UIG modules. 
         It can be used in other industrial systems as an uninterruptible power supply with DIN rail mounting. `,
-        demoLink: "https://google.com/",
+        demoLink: "https://github.com/Pablo2205/UPS-Microelectronics",
       },
       stack:[
         {
@@ -130,7 +130,7 @@ export const projects = [
         This unit uses Microelectromechanical Systems (MEMs) technology to acquire and record ambient temperature and humidity.
         It also features a port for connecting a remote PT100 probe to measure the temperature of the transformer's cooling oil.`,
         },
-      demoLink: "https://google.com/",
+      demoLink: "https://github.com/Pablo2205/TEA-Module",
       stack:[
         {
           name:"PCB Design",
@@ -162,7 +162,7 @@ export const projects = [
         Its main feature is its very wide operating range (60-440 V AC). 
         Its main function is to provide power to the various components of the Smart Set system: the UIG, TEA, and UAS for Temperature and Humidity. `,
         },
-      demoLink: "https://google.com/",
+      demoLink: "https://github.com/Pablo2205/POW-Module",
       stack:[
         {
           name:"PCB Design",
@@ -193,7 +193,7 @@ export const projects = [
 The system is based on a network of sensors that measure the physical properties of the waste and help determine the object being sorted.
 The system is capable of sorting waste into four categories: metals, plastics, paper, and glass.
 The system is capable of sorting waste in real time and autonomously.`,
-        demoLink: "https://google.com/",
+        demoLink: "https://github.com/Pablo2205/Waste-Sorting-System",
       },
       stack:[
         {
@@ -254,7 +254,7 @@ The system is capable of sorting waste in real time and autonomously.`,
         `This project is part of the IBM DevOps and Software Development Professional Certificate. 
         It involves creating a web application that allows users to manage their tasks, including adding, editing, and deleting tasks. 
         The application is built using Python, Flask, and MongoDB, and it is deployed on IBM Cloud.`,
-        demoLink: "https://google.com/",
+        demoLink: "https://github.com/Pablo2205/IBM-Task-Manager",
       },
       stack:[
         {
