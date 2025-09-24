@@ -303,14 +303,14 @@ The system is capable of sorting waste in real time and autonomously.`,
     },
    {
       id:10,
-      title: 'Password Generator',
+      title: 'Password Generate',
       image: '/images/projectsImages/PasswordGenerate.png',
       category:"Development",
       data:{
         description: 
         `Web program for generating random secure keys, allowing you to select the complexity by selecting the length and characters used. 
         It also allows users to copy the keys to the clipboard.`,
-        demoLink: "https://github.com/Pablo2205/Password-Generator",
+        demoLink: "https://github.com/Pablo2205/Password-Generate",
       },
       stack:[
         {
