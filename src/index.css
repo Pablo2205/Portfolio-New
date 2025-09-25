@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 :root{
     --color-primary: #2563EB;
-    --color-secondary: rgba(13, 17, 23, 0.929);
+    --color-secondary: rgba(5, 7, 9, 0.929);
     --color-text: #fff;
     --color-muted:#9fa5a5;
     --color-success:#07369c;
