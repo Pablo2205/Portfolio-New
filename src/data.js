@@ -186,13 +186,13 @@ export const projects = [
     {
       id:6,
       title: 'Smart Waste Sorter',
-      image: '/images/projectsImages/electronic.png',
+      image: '/images/projectsImages/STM32.png',
       category:"Engineering",
       data:{
         description: `Electronic waste sorting system
-The system is based on a network of sensors that measure the physical properties of the waste and help determine the object being sorted.
-The system is capable of sorting waste into four categories: metals, plastics, paper, and glass.
-The system is capable of sorting waste in real time and autonomously.`,
+        The system is based on a network of sensors that measure the physical properties of the waste and help determine the object being sorted.
+        The system is capable of sorting waste into four categories: metals, plastics, paper, and glass.
+        The system is capable of sorting waste in real time and autonomously.`,
         demoLink: "https://github.com/Pablo2205/Waste-Sorting-System",
       },
       stack:[
@@ -246,7 +246,7 @@ The system is capable of sorting waste in real time and autonomously.`,
     },
     {
       id: 8,
-      title: 'IBM DevOps & Software Development Capstone Project',
+      title: 'IBM DevOps & Soft Eng Capstone Project',
       image: '/images/projectsImages/IBMPR1.jpg',
       category:"Development",
       data:{
