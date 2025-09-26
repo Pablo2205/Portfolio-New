@@ -471,11 +471,6 @@ export const experience = [
               level: "Advanced",
               svgIcon: "/images/python.svg",
           },
-          {
-              skill: "API RestFull",
-              level: "Basic",
-              svgIcon: "/images/postman.svg",
-          },
       ],
   },
     {
@@ -602,19 +597,14 @@ export const experience = [
               svgIcon: "/images/git.svg",
           },
           {
-              skill: "GitLab",
-              level: "Intermediate",
-              svgIcon: "/images/gitlab.svg",
-          },
-          {
               skill: "GitHub",
               level: "Intermediate",
               svgIcon: "/images/github.svg",
           },
           {
-              skill: "Jira",
-              level: "Advanced",
-              svgIcon: "/images/jira.svg",
+              skill: "GitLab",
+              level: "Intermediate",
+              svgIcon: "/images/gitlab.svg",
           },
           {
               skill: "Docker",
@@ -622,15 +612,16 @@ export const experience = [
               svgIcon: "/images/docker.svg",
           },
           {
-              skill: "Kubernetes",
-              level: "Basic",
-              svgIcon: "/images/kuber.svg",
+              skill: "Jira",
+              level: "Advanced",
+              svgIcon: "/images/jira.svg",
           },
           {
-              skill: "Jenkins",
-              level: "Basic",
-              svgIcon: "/images/jenkins.svg",
-          },
+            skill: "API RestFull",
+            level: "Basic",
+            svgIcon: "/images/postman.svg",
+        },
+
           {
               skill: "Vercel",
               level: "Basic",
