@@ -524,7 +524,7 @@ export const experience = [
           {
               skill: "Veeam",
               level: "Intermediate",
-              svgIcon: "/images/Veeam.svg",
+              svgIcon: "/images/Veeam1.svg",
           },
           {
               skill: "Bash Scripting",
