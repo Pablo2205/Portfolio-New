@@ -512,7 +512,7 @@ export const experience = [
               svgIcon: "/images/windows.svg",
           },
           {
-              skill: "Linux",
+              skill: "Linux Server",
               level: "Experienced",
               svgIcon: "/images/linux.svg",
           },
@@ -522,7 +522,7 @@ export const experience = [
               svgIcon: "/images/vmware.svg",
           },
           {
-              skill: "Veeam",
+              skill: "Veeam Backup",
               level: "Intermediate",
               svgIcon: "/images/Veeam1.svg",
           },
