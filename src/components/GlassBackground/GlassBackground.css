@@ -1,0 +1,76 @@
+/* ── GlassBackground v2 ───────────────────────────────────────── */
+
+.gbg__root {
+  position: relative;
+  min-height: 100vh;
+}
+
+.gbg__content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Ambient glow blobs ──────────────────────────────────────── */
+.gbg__glow {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(100px);
+}
+
+/* Top — main hero glow, large teal ellipse */
+.gbg__glow--top {
+  width: 900px;
+  height: 500px;
+  top: -160px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse,
+    rgba(13, 148, 136, 0.20) 0%,
+    rgba(13, 148, 136, 0.06) 50%,
+    transparent 100%
+  );
+  animation: glowPulse 8s ease-in-out infinite alternate;
+}
+
+/* Mid — subtle center accent */
+.gbg__glow--mid {
+  width: 500px;
+  height: 400px;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse,
+    rgba(13, 148, 136, 0.07) 0%,
+    transparent 70%
+  );
+  animation: glowPulse 12s ease-in-out infinite alternate-reverse;
+}
+
+/* Bottom — footer warmth */
+.gbg__glow--bottom {
+  width: 600px;
+  height: 350px;
+  bottom: -80px;
+  left: 30%;
+  background: radial-gradient(ellipse,
+    rgba(52, 211, 153, 0.08) 0%,
+    transparent 70%
+  );
+  animation: glowDrift 16s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  0%   { opacity: 0.7; transform: translateX(-50%) scale(1); }
+  100% { opacity: 1;   transform: translateX(-50%) scale(1.08); }
+}
+
+@keyframes glowDrift {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(120px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gbg__glow { animation: none; }
+}

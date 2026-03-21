@@ -1,121 +1,165 @@
+/* ── Navbar ───────────────────────────────────────────────────── */
+
 .navbar__container {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    padding: 20px;
-    position: relative;
-    width: 100%;
-    background: rgba(10, 10, 10, 0.5); /* Fondo translúcido */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  background: rgba(7, 13, 14, 0.80);
+  backdrop-filter: blur(24px) saturate(1.5);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  border-bottom: 1px solid rgba(45, 212, 191, 0.10);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.40), 0 1px 0 rgba(45,212,191,0.06) inset;
 }
 
 .navbar__container.visible {
-    background: rgba(10, 10, 10, 0.12); /* Igual o más transparente que el normal */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    position: sticky;
+  top: 0;
 }
 
-/* El logo ya no es necesario, puedes dejarlo o quitarlo si prefieres */
-
-.navbar__container .tab__group{
-    display: flex;
-    align-items: center;
-    justify-content: center; /* CENTRA los tabs horizontalmente */
-    gap: 20px;
+/* ── Tab group — horizontal centered links ───────────────────── */
+.tab__group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;          /* ← fuerza horizontal */
+  flex-wrap: nowrap;
+  gap: 0.25rem;
+  height: 64px;
+  width: 100%;
+  padding: 0 60px;              /* espacio para el botón hamburger */
+  list-style: none;
 }
 
-.navbar__container .tab__item{
-    position: relative;
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: 600;
+.tab__item {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-muted);
+  padding: 8px 16px;
+  border-radius: var(--border-radius-3);
+  cursor: pointer;
+  transition: color 180ms ease, background 180ms ease;
+  white-space: nowrap;
+  user-select: none;
+  display: block;
 }
 
-.navbar__container .tab__item.active::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--gradient-1);
-    border-radius: var(--border-radius-4);
-    animation: drawer .5s;
+.tab__item:hover {
+  color: var(--color-primary-bright);
+  background: rgba(45, 212, 191, 0.06);
 }
 
-@keyframes drawer {
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 100%;
-    }
+.tab__item.active {
+  color: var(--color-primary-bright);
+  background: rgba(13, 148, 136, 0.12);
+  border: 1px solid rgba(45, 212, 191, 0.14);
 }
 
-/* Oculta grupo de botones de navegación para escritorio si no hay elementos */
-.navbar__container .nav__buttons__group{
-    display: none;
+/* ── Close button — only visible on mobile ───────────────────── */
+.close__btn {
+  display: none !important;
 }
 
-.navbar__container .menu{
-    font-size: 25px;
-    cursor: pointer;
-    display: none;
+/* ── Hamburger ───────────────────────────────────────────────── */
+.nav__buttons__group {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
 }
 
-.navbar__container .close__btn{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 2;
-    font-size: 16px;
-    display: none;
+.nav__buttons__group .menu {
+  font-size: 22px;
+  color: var(--color-muted);
+  cursor: pointer;
+  display: none;          /* hidden on desktop */
+  transition: color 180ms ease;
 }
 
-.navbar__container .overlay{
-    background: rgba(1,1,1,0.5);
+.nav__buttons__group .menu:hover {
+  color: var(--color-primary-bright);
+}
+
+/* ── Overlay ──────────────────────────────────────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 13, 14, 0.70);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  animation: fadeIn 200ms ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE — mobile sidebar
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .tab__group {
+    /* sidebar drawer */
     position: fixed;
     top: 0;
-    left: 0;
-    height: 100%;
-    min-height: 100vh;
-    width: 100%;
-    z-index: 199;
-    user-select: none;
-    cursor: pointer;
-}
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 20px 40px;
+    gap: 4px;
+    background: rgba(7, 13, 14, 0.97);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-left: 1px solid rgba(45, 212, 191, 0.10);
+    box-shadow: -8px 0 32px rgba(0,0,0,0.5);
+    z-index: 1001;
+    transition: right 350ms cubic-bezier(0.16, 1, 0.3, 1);
+    height: 100vh;        /* full height */
+  }
 
-@media (max-width:900px){
-    .navbar__container{
-        background: var(--color-ui-2);
-    }
-    .navbar__container .tab__group{
-        position: fixed;
-        width: 300px;
-        height: 100%;
-        min-height: 100vh;
-        background: var(--color-ui-1);
-        top: 0;
-        left: -100%;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: flex-start;
-        z-index: 200;
-        transition: var(--transition);
-        padding-top: 20px;
-    }
-    .navbar__container .tab__group.show{
-        left: 0;
-    }
-    .navbar__container .menu{
-        display: block;
-    }
-    .navbar__container .close__btn{
-        display: flex;
-    }
-    .navbar__container .nav__buttons__group{
-        display: flex; /* Si necesitas el menú hamburguesa en móvil */
-    }
+  .tab__group.show {
+    right: 0;
+  }
+
+  .tab__item {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+
+  .close__btn {
+    display: flex !important;
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    color: var(--color-muted);
+    cursor: pointer;
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(45,212,191,0.06);
+    border: 1px solid rgba(45,212,191,0.12);
+    transition: var(--transition-fast);
+  }
+
+  .close__btn:hover {
+    background: rgba(45,212,191,0.12);
+    color: var(--color-primary-bright);
+  }
+
+  .nav__buttons__group .menu {
+    display: block;
+  }
 }
