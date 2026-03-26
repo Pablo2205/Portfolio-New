@@ -60,22 +60,12 @@ const About = () => {
                       SysAdmin · Cloud · IoT · Dev
                     </span>
                   </div>
-                </div>
-
-                {/* QR */}
-                <div className="id__card__qr">
-                  {QR_PATTERN.map((on, i) => (
-                    <div
-                      key={i}
-                      className="id__card__qr__dot"
-                      style={{ opacity: on ? 0.85 : 0.08 }}
-                    />
-                  ))}
-                </div>
               </div>
             </div>
           </div>
         </div>
+        </div>
+        
 
         {/* ── Text ── */}
         <div className="section__header">

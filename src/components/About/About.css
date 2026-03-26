@@ -140,26 +140,6 @@
     letter-spacing: 0.06em;
   }
   
-  /* QR code placeholder */
-  .id__card__qr {
-    width: 52px;
-    height: 52px;
-    border-radius: 6px;
-    background: rgba(45, 212, 191, 0.06);
-    border: 1px solid rgba(45, 212, 191, 0.14);
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2px;
-    padding: 6px;
-    flex-shrink: 0;
-  }
-  
-  .id__card__qr__dot {
-    border-radius: 1px;
-    background: var(--color-primary-bright);
-    opacity: 0.7;
-  }
-  
   /* Lanyard string */
   .id__card__lanyard {
     position: absolute;
