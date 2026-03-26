@@ -4,14 +4,6 @@ import profile2 from '../../images/profile-2.png'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-/* QR dot pattern — deterministic from index */
-const QR_PATTERN = [
-  1,1,1,0,1,
-  1,0,1,1,0,
-  0,1,0,1,1,
-  1,1,0,0,1,
-  0,1,1,1,0,
-];
 
 const About = () => {
   const container = useRef(null)
@@ -65,7 +57,7 @@ const About = () => {
                   <div className="id__card__field">
                     <span className="id__card__field__label">Sector</span>
                     <span className="id__card__field__value" style={{ fontSize: '11px' }}>
-                      IoT · Cloud · Dev
+                      SysAdmin · Cloud · IoT · Dev
                     </span>
                   </div>
                 </div>
