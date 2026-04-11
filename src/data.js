@@ -245,38 +245,7 @@ export const projects = [
       ]
     },
     {
-      id: 8,
-      title: 'IBM DevOps & Soft Eng Capstone Project',
-      image: '/images/projectsImages/IBMPR1.jpg',
-      category:"Development",
-      data:{
-        description: 
-        `This project is part of the IBM DevOps and Software Development Professional Certificate. 
-        It involves creating a web application that allows users to manage their tasks, including adding, editing, and deleting tasks. 
-        The application is built using Python, Flask, and MongoDB, and it is deployed on IBM Cloud.`,
-        demoLink: "https://github.com/Pablo2205/IBM-Task-Manager",
-      },
-      stack:[
-        {
-          name:"Docker ", 
-          svgIcon: "/images/docker.svg",
-        },
-        {
-          name:"PostgreSQL",
-          svgIcon: "/images/postgresql.svg",
-        },
-        {
-          name: "Git ",
-          svgIcon: "/images/git.svg",
-        },
-        {
-          name:"IBM Cloud",
-          svgIcon: "/images/IBM.svg",
-        }
-      ]
-    },
-    {
-      id:9,
+      id:8,
       title: 'Wheater App',
       image: '/images/projectsImages/WheaterApp.png',
       category:"Development",
@@ -302,7 +271,7 @@ export const projects = [
       ]
     },
    {
-      id:10,
+      id:9,
       title: 'Password Generate',
       image: '/images/projectsImages/PasswordGenerate.png',
       category:"Development",
@@ -320,83 +289,7 @@ export const projects = [
       ]
     }, 
     {
-      id:11,
-      title: 'Cientific Calculator',
-      image: '/images/projectsImages/Calculator.png',
-      category:"Development",
-      data:{
-        description: 
-        `A simple yet efficient scientific calculator program, with all the basic functions of a scientific calculator, with the ability to perform basic operations.`,
-        demoLink: "https://github.com/Pablo2205/Scientific-Calculator",
-      },
-      stack:[
-        {
-          name:"HTML 5",
-          svgIcon: "/images/html5.svg",
-        },
-        {
-          name:"CSS 3",
-          svgIcon: "/images/css.svg",
-        },
-        {
-          name:"Java Script",
-          svgIcon: "/images/javascript.svg",
-        }
-      ]
-    },
-    
-    {
-      id:12,
-      title: 'Veeam Backup for Microsoft 365',
-      image: '/images/projectsImages/veeam365-flow.png',
-      category:"Infrastructure",
-      data:{
-        description: 
-        `Implementation of the world's leading backup and restore orchestrator, using Veeam Backup for Microsoft 365 as the central orchestrator for managing backups and restores of Microsoft 365 applications within a business environment with more than 150 users.`,
-        demoLink: "https://github.com/Pablo2205/Veeam-Backup-for-Microsoft-365",
-      },
-      stack:[
-        {
-          name:"Veeam",
-          svgIcon: "/images/Veeam_logo2.svg",
-        },
-        {
-          name:"Office 365",
-          svgIcon: "/images/microsoft.svg",
-        },
-        {
-          name:"Azure",
-          svgIcon: "/images/azure.svg", 
-        }
-      ]
-    },
-    {
-      id:13,
-      title: 'Portal from user HelpDesk IT',
-      image: '/images/projectsImages/portalusers.png',
-      category:"Infrastructure",
-      data:{
-        description: 
-        `User portal for managing incidents and technical support requests. The interface allows users to open a technical support ticket, view the status of open tickets, view the history of closed tickets, and download manuals and user guides.`,
-        demoLink: "https://github.com/Pablo2205/Portal-from-user-HelpDesk-IT",
-      },
-      stack:[
-        {
-          name:"HTML 5",
-          svgIcon: "/images/html5.svg",
-        },
-        {
-          name:"CSS 3",
-          svgIcon: "/images/css.svg",
-        },
-        {
-          name:"Java Script",
-          svgIcon: "/images/javascript.svg",
-        }
-      ]
-    },
-    {
-      id:14,
+      id:10,
       title: 'NAS to Raspberry Pi',
       image: '/images/projectsImages/NAStoRaspberry.png',
       category:"Infrastructure",
