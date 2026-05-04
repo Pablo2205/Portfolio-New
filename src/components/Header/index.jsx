@@ -72,7 +72,7 @@ const Header = () => {
             </div>
             <Facts />
             <div className="header__info__bottom">
-              <a href="/CV_Pablo COria 2026.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/CV_Pablo Coria 2026.pdf" target="_blank" rel="noopener noreferrer">
                 <button className="btn">Download CV</button>
               </a>
               <a href="mailto:pablo.cor1@Icloud.com" className="btn">Email Me</a>
