@@ -217,7 +217,7 @@ export const projects = [
     {
       id:7,
       title: 'Portfolio Web',
-      image: '/images/projectsImages/portfolio-react.png',
+      image: '/images/projectsImages/portfolio.png',
       category:"Development",
       data:{
         description: 
@@ -246,14 +246,13 @@ export const projects = [
     },
     {
       id:8,
-      title: 'Wheater App',
-      image: '/images/projectsImages/WheaterApp.png',
+      title: 'Ecommerce Website',
+      image: '/images/projectsImages/ecommerce.png',
       category:"Development",
       data:{
         description: 
-        `A web program capable of displaying the current weather in a city, with the ability to view the weather for the next 5 days, i
-        including temperature, humidity, wind, and the probability of rain.`,
-        demoLink: "https://github.com/Pablo2205/Wheater-App",
+        `Ecommerce website for selling products online. Invite digital products.`,
+        demoLink: "https://veintidos.vercel.app",
       },
       stack:[
         {
