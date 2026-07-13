@@ -223,7 +223,7 @@ export const projects = [
         description: 
         `Personal web portfolio, designed to showcase my skills and completed projects, with the option to contact me via the contact form and view my social media accounts.
         It was developed with React and Tailwind and published on Vercel Hosting.`,
-        demoLink: `https://github.com/Pablo2205/Portfolio-New`,
+        demoLink: `https://pcoria.com`,
       },
       stack:[
         {
