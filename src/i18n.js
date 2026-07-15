@@ -6,6 +6,7 @@ const translations = {
       about: "About",
       services: "Services",
       skill: "Skills",
+      certifications: "Certifications", 
       projects: "Projects",
       contact: "Contact",
     },
@@ -67,6 +68,11 @@ const translations = {
         Experienced: "Experienced",
       },
     },
+    certifications: {
+      sectionTitle: "Certifications",
+      description:
+        "Certifications obtained in courses and certifications performed.",
+    },
     projects: {
       sectionTitle: "Projects",
       tabs: {
@@ -100,6 +106,7 @@ const translations = {
       about: "Sobre mí",
       services: "Servicios",
       skill: "Habilidades",
+      certifications: "Certificados",
       projects: "Proyectos",
       contact: "Contacto",
     },
@@ -160,6 +167,11 @@ const translations = {
         Advanced: "Avanzado",
         Experienced: "Experimentado",
       },
+    },
+    certifications: {
+      sectionTitle: "Certificados",
+      description:
+        "Certificados obtenidos en cursos y certificaciones realizados.",
     },
     projects: {
       sectionTitle: "Proyectos",

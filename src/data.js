@@ -577,3 +577,22 @@ export const socialHandles = [
     link:"https://www.linkedin.com/in/pablo-coria01/",
   },*/
 ];
+
+
+export const certifications = [
+  {
+    title: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services",
+    year: "2024",
+    logo: "/images/aws.svg",
+    link: "",   // URL de Credly/badge — si queda vacío no se muestra el botón
+  },
+  {
+    title: "Microsoft Azure Fundamentals (AZ-900)",
+    issuer: "Microsoft",
+    year: "2024",
+    logo: "/images/azure.svg",
+    link: "",
+  },
+  // ...agregá las que quieras con el mismo formato
+];

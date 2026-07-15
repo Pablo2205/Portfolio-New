@@ -12,6 +12,7 @@ import GlassBackground from "./components/GlassBackground/GlassBackground"
 import LanguageSwitch from "./components/LanguageSwitch"
 import { LanguageProvider } from "./i18n"
 import "./components/responsive.css"
+import Certificate from "./components/Certifications"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <About/>
         <Services/>
         <Skills/>
+        <Certifications/>
         <Projects/>
         <Contact/>
         <Footer/>
