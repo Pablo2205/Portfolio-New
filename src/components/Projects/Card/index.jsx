@@ -1,23 +1,30 @@
 import React, { useState } from 'react'
 import "./Card.css"
 import { AiOutlineShareAlt } from 'react-icons/ai'
+import { useLanguage } from '../../../i18n'
 
 const Card = (props) => {
+    const { t, lang } = useLanguage();
     const [openStackExpandBar, setOpenStackExpandBar] = useState(false);
-  
+
+    const description =
+      lang === 'es' && props.data.description_es
+        ? props.data.description_es
+        : props.data.description;
+
     return (
       <div className="card">
         <div className="picture">
           <img src={props.image} alt={props.title} />
         </div>
-  
+
         <div className="card__details">
           <div className="card__details__top">
             <h2 className="title">{props.title}</h2>
           </div>
           <div className="card__details__middle">
             <p className="description">
-              {props.data.description}
+              {description}
             </p>
           </div>
           <div className="card__details__bottom">
@@ -44,7 +51,7 @@ const Card = (props) => {
                     return null;
                   })}
                 </div>
-  
+
                 {props.stack.length > 4 && (
                   <div className="stack__view__more">
                     <div
@@ -56,7 +63,7 @@ const Card = (props) => {
                         openStackExpandBar ? "open__stack__expand__box" : ""
                       }`}
                     >
-                      <h3 className="title">More Stack Used</h3>
+                      <h3 className="title">{t.projects.moreStack}</h3>
                       <div className="stack__box__container">
                         {props.stack.map((list, index) => {
                           if (index >= 4) {
@@ -84,12 +91,12 @@ const Card = (props) => {
             </div>
             <div className="button__container">
               <a
-                href={props.DemoLink} 
+                href={props.DemoLink}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn__primary"
               >
-                Demo
+                {t.projects.demo}
               </a>
               <div className="btn__share">
                 <AiOutlineShareAlt />
@@ -100,6 +107,5 @@ const Card = (props) => {
       </div>
     );
   };
-  
+
   export default Card;
-  

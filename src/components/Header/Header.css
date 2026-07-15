@@ -1,4 +1,4 @@
-/* ── Header ───────────────────────────────────────────────────── */
+/* ── Header — hero estilo cr.studio ───────────────────────────── */
 
 #header {
   overflow: hidden;
@@ -10,11 +10,11 @@
   top: 0; right: 0;
   width: 500px; height: 500px;
   margin-right: -8%; margin-top: -8%;
-  background: radial-gradient(circle, rgba(13,148,136,0.16) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(32, 80, 224, 0.07) 0%, transparent 70%);
   filter: blur(80px);
 }
 
-/* HELLO bg text */
+/* HELLO — texto decorativo de fondo */
 #header .intro__text {
   font-size: 200px;
   position: absolute;
@@ -22,12 +22,12 @@
   width: 100%;
   text-align: center;
   z-index: 0;
-  font-weight: 900;
-  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-family: var(--sans);
   text-transform: uppercase;
-  -webkit-text-stroke: 1px rgba(45, 212, 191, 0.05);
+  -webkit-text-stroke: 1px var(--line);
   -webkit-text-fill-color: transparent;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.02em;
   user-select: none;
   pointer-events: none;
 }
@@ -42,51 +42,68 @@
 }
 
 #header .column { position: relative; z-index: 1; }
-#header .intro__container { width: 550px; }
+#header .intro__container { width: 560px; }
 
 #header .intro__container.blur-effect::before {
   bottom: 0; left: 0;
   width: 200px; height: 200px;
   margin-left: -5%; margin-bottom: -5%;
-  background: radial-gradient(circle, rgba(13,148,136,0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(32, 80, 224, 0.06) 0%, transparent 70%);
   filter: blur(60px);
 }
 
-/* ── Text ─────────────────────────────────────────────────────── */
+/* ── Texto ────────────────────────────────────────────────────── */
+/* Etiqueta superior estilo cr.studio: — HELLO, I AM PABLO */
 #header .header__info__top {
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--color-muted);
-  letter-spacing: 0.02em;
-  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 18px;
+}
+#header .header__info__top::before {
+  content: '';
+  width: 34px;
+  height: 1px;
+  background: var(--blue);
+  flex: none;
 }
 
 #header .header__info__top .color__primary {
-  color: var(--color-primary-bright);
+  color: var(--blue);
   font-weight: 600;
 }
 
+/* Título principal con "/" azul */
 #header .header__title {
-  font-family: "Syne", sans-serif;
-  font-size: 62px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  background: var(--gradient-title);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-family: var(--sans);
+  font-size: clamp(2.8rem, 6vw, 4.6rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.0;
+  color: var(--ink);
+}
+#header .header__title::before {
+  content: '/';
+  color: var(--blue);
+  font-weight: 500;
+  margin-right: 2px;
 }
 
 #header .header__description {
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.75;
-  margin: 16px 0;
-  color: var(--color-text-dim);
+  line-height: 1.7;
+  margin: 22px 0;
+  color: var(--gray);
+  max-width: 54ch;
 }
 
-/* ── Buttons ──────────────────────────────────────────────────── */
+/* ── Botones ──────────────────────────────────────────────────── */
 #header .header__info__bottom {
   margin-top: 32px;
   display: flex;
@@ -94,61 +111,72 @@
   gap: 14px;
   flex-wrap: wrap;
 }
-  #header .header__info__bottom .btn,
-  #header .header__info__bottom a {
+#header .header__info__bottom .btn,
+#header .header__info__bottom a {
   opacity: 1 !important;
 }
 
-/* Mismo estilo glass que los iconos sociales, pero en pill */
 #header .header__info__bottom a,
 #header .header__info__bottom button.btn {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 12px 28px !important;
-  border-radius: 42px !important;
-  font-family: "DM Sans", sans-serif !important;
+  padding: 13px 30px !important;
+  border-radius: 999px !important;
+  font-family: var(--sans) !important;
   font-size: 14px !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   cursor: pointer !important;
   transition: var(--transition) !important;
   text-decoration: none !important;
   white-space: nowrap !important;
-  background: var(--glass-bg) !important;
-  backdrop-filter: blur(var(--glass-blur)) !important;
-  -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
-  border: 1px solid var(--glass-border) !important;
-  color: var(--color-muted) !important;
-  -webkit-text-fill-color: var(--color-muted) !important;
+  background: var(--blue) !important;
+  border: 1px solid var(--blue) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
   box-sizing: border-box !important;
   line-height: 1 !important;
-  box-shadow: var(--glass-shadow) !important;
+  box-shadow: none !important;
 }
 
-/* El <a> que wrappea el <button> no necesita padding propio */
+/* El segundo botón (Email Me) en versión ghost */
+#header .header__info__bottom > a.btn {
+  background: transparent !important;
+  border: 1px solid var(--ink) !important;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+}
+
 /* El <a> que wrappea el <button> no tiene padding propio */
 #header .header__info__bottom a:has(> button) {
   padding: 0 !important;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
   width: auto !important;
   height: auto !important;
 }
 
-#header .header__info__bottom a:hover,
-#header .header__info__bottom button.btn:hover {
-  background: rgba(13,148,136,0.16) !important;
-  border-color: rgba(45,212,191,0.32) !important;
-  color: var(--color-primary-bright) !important;
-  -webkit-text-fill-color: var(--color-primary-bright) !important;
-  transform: translateY(-3px) !important;
-  box-shadow: 0 8px 20px rgba(13,148,136,0.28) !important;
+#header .header__info__bottom a:has(> button):hover {
+  transform: none !important;
 }
 
-/* ── Profile photo ────────────────────────────────────────────── */
+#header .header__info__bottom button.btn:hover {
+  background: var(--blue-deep) !important;
+  border-color: var(--blue-deep) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(32, 80, 224, 0.28) !important;
+}
+
+#header .header__info__bottom > a.btn:hover {
+  border-color: var(--blue) !important;
+  color: var(--blue) !important;
+  -webkit-text-fill-color: var(--blue) !important;
+  transform: translateY(-2px) !important;
+  background: transparent !important;
+}
+
+/* ── Foto de perfil ───────────────────────────────────────────── */
 #header .profile__wrapper {
   flex: 1;
   display: flex;
@@ -158,11 +186,11 @@
 }
 
 #header .profile__photo__container {
-  width: 460px;
+  width: 440px;
   max-width: 100%;
   position: relative;
   margin: auto;
-  mix-blend-mode: lighten;
+  mix-blend-mode: normal;
 }
 
 #header .profile__photo__container::after,
@@ -177,9 +205,10 @@
   object-fit: contain;
   mask-image: none;
   -webkit-mask-image: none;
+  filter: drop-shadow(0 24px 40px rgba(15, 42, 107, 0.14));
 }
 
-/* ── Social icons ─────────────────────────────────────────────── */
+/* ── Redes sociales ───────────────────────────────────────────── */
 .social-icons {
   display: flex;
   gap: 14px;
@@ -194,34 +223,33 @@
   width: 42px !important;
   height: 42px !important;
   border-radius: 50% !important;
-  background: var(--glass-bg) !important;
-  backdrop-filter: blur(var(--glass-blur)) !important;
-  -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
-  border: 1px solid var(--glass-border) !important;
-  color: var(--color-muted) !important;
-  -webkit-text-fill-color: var(--color-muted) !important;
+  background: var(--bg-2) !important;
+  border: 1px solid var(--line) !important;
+  color: var(--gray) !important;
+  -webkit-text-fill-color: var(--gray) !important;
   transition: var(--transition) !important;
   padding: 0 !important;
 }
 
 .social-icons a:hover {
-  background: rgba(13,148,136,0.16) !important;
-  border-color: rgba(45,212,191,0.32) !important;
-  color: var(--color-primary-bright) !important;
-  -webkit-text-fill-color: var(--color-primary-bright) !important;
+  background: var(--blue-soft) !important;
+  border-color: var(--blue) !important;
+  color: var(--blue) !important;
+  -webkit-text-fill-color: var(--blue) !important;
   transform: translateY(-3px) !important;
-  box-shadow: 0 8px 20px rgba(13,148,136,0.28) !important;
+  box-shadow: 0 8px 20px rgba(32, 80, 224, 0.14) !important;
 }
 
-/* ── Facts row fix ────────────────────────────────────────────── */
+/* ── Fila de facts ────────────────────────────────────────────── */
 .fact__container {
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   align-items: flex-start;
-  gap: 2rem;
-  margin: 30px 0;
+  gap: 0;
+  margin: 34px 0 0;
   overflow: visible;
+  border-top: 1px solid var(--line);
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -251,8 +279,9 @@
   #header .intro__container { width: 100%; }
 
   #header .header__title { font-size: 42px; text-align: center; }
-  #header .header__info__top,
-  #header .header__description { text-align: center; }
+  #header .header__title::before { content: ''; }
+  #header .header__info__top { justify-content: center; }
+  #header .header__description { text-align: center; margin-left: auto; margin-right: auto; }
 
   #header .header__info__bottom { justify-content: center; }
   #header .profile__wrapper { order: -1; }
@@ -262,6 +291,7 @@
     justify-content: center;
     flex-wrap: wrap !important;
     gap: 1.5rem;
+    border-top: none;
   }
   .fact__item { align-items: center; }
 }

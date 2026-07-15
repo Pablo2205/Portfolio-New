@@ -3,9 +3,11 @@ import "./About.css"
 import profile2 from '../../images/profile-2.png'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useLanguage } from '../../i18n'
 
 
 const About = () => {
+  const { t } = useLanguage();
   const container = useRef(null)
   gsap.registerPlugin(ScrollTrigger)
 
@@ -45,17 +47,17 @@ const About = () => {
               <div className="id__card__info__row">
                 <div className="id__card__fields">
                   <div className="id__card__field">
-                    <span className="id__card__field__label">Role</span>
+                    <span className="id__card__field__label">{t.about.card.role}</span>
                     <span className="id__card__field__value id__card__field__value--role">
-                      Software Engineer
+                      {t.about.card.roleValue}
                     </span>
                   </div>
                   <div className="id__card__field">
-                    <span className="id__card__field__label">Name</span>
+                    <span className="id__card__field__label">{t.about.card.name}</span>
                     <span className="id__card__field__value">Pablo Coria</span>
                   </div>
                   <div className="id__card__field">
-                    <span className="id__card__field__label">Sector</span>
+                    <span className="id__card__field__label">{t.about.card.sector}</span>
                     <span className="id__card__field__value" style={{ fontSize: '11px' }}>
                       SysAdmin · Cloud · IoT · Dev
                     </span>
@@ -65,21 +67,16 @@ const About = () => {
           </div>
         </div>
         </div>
-        
+
 
         {/* ── Text ── */}
         <div className="section__header">
-          <h2 className="primary__title">About Me</h2>
+          <h2 className="primary__title">{t.about.sectionTitle}</h2>
           <h1 className="title">
-            My name is <span className="color__primary">Pablo Coria</span>
+            {t.about.titlePre} <span className="color__primary">{t.about.titleName}</span>
           </h1>
           <p className="text__muted description">
-            I am a software development specialist with extensive experience in C, C++,
-            and embedded systems, as well as in IoT and telecommunications projects.
-            My academic background includes an associate's degree in electronics,
-            a university associate's degree in programming, and I am currently pursuing
-            a degree in Computer Engineering with a specialization in microcontroller
-            software development.
+            {t.about.description}
           </p>
         </div>
       </div>

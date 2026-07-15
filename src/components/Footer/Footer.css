@@ -1,101 +1,78 @@
-/* ── Footer ──────────────────────────────────────────────────── */
+/* ── Footer — gris carbón estilo Tecnon ───────────────────────── */
 
 #footer {
-    position: relative;
-    border-top: 1px solid rgba(45, 212, 191, 0.08);
-  }
-  
-  #footer .section__wrapper {
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
-  
-  /* Nav links — SIEMPRE horizontal */
-  #footer .nav__link__container {
-    display: flex;
-    flex-direction: row !important;   /* override del media query anterior */
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px 24px;
-  }
-  
-  #footer .nav__link__container .tab__item,
-  #footer .nav__link__container a {
-    font-family: "DM Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--color-muted);
-    transition: var(--transition-fast);
-    cursor: pointer;
-    white-space: nowrap;
-    display: inline-block !important;
-  }
-  
-  #footer .nav__link__container .tab__item:hover,
-  #footer .nav__link__container a:hover {
-    color: var(--color-primary-bright);
-  }
-  
-  /* Social handles */
-  #footer .social__handles__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 0;
-  }
-  
-  #footer .social__handles__container .icon__container {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: var(--glass-bg);
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    border: 1px solid var(--glass-border);
-    color: var(--color-muted);
-    font-size: 1.1rem;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  #footer .social__handles__container .icon__container:hover {
-    background: rgba(13,148,136,0.16);
-    border-color: rgba(45,212,191,0.32);
-    color: var(--color-primary-bright);
-    transform: translateY(-3px);
-  }
-  
-  /* Copyright */
-  #footer .copyright__container {
-    width: 100%;
-    text-align: center;
-    margin-top: 0;
-  }
-  
-  #footer .copyright__container h3,
-  #footer .copyright__container p {
-    font-size: 12px;
-    font-weight: 400;
-    color: var(--color-muted);
-  }
-  
-  /* ── Responsive ──────────────────────────────────────────────── */
-  @media (max-width: 768px) {
-    /* Override explícito del media query original que ponía column */
-    #footer .nav__link__container {
-      flex-direction: row !important;
-      gap: 6px 16px;
-    }
-  
-    #footer .nav__link__container .tab__item,
-    #footer .nav__link__container a {
-      font-size: 12px;
-    }
-  }
+  position: relative;
+  border-top: 1px solid #2E323A;
+  background: #1B1E24;
+}
+
+#footer .section__wrapper {
+  padding: 44px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Nav links — siempre horizontal */
+#footer .nav__link__container {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 26px;
+}
+
+#footer .nav__link__container .tab__item,
+#footer .nav__link__container a {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8A93A5;
+  transition: var(--transition-fast);
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-block !important;
+  padding: 4px 0;
+  background: none;
+  border-radius: 0;
+}
+
+#footer .nav__link__container .tab__item:hover,
+#footer .nav__link__container a:hover {
+  color: #8FB8DC;
+  background: none;
+}
+
+#footer .nav__link__container .tab__item.active {
+  background: none;
+  border: none;
+  color: #8FB8DC;
+}
+
+/* Redes */
+#footer .social__handles__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+#footer .social__handles {
+  color: #8A93A5;
+  background: #23262B;
+  border-color: #3A4150;
+}
+#footer .social__handles:hover {
+  color: #8FB8DC;
+  border-color: #8FB8DC;
+}
+
+/* Copyright */
+#footer .copyright__container p {
+  font-size: 0.8rem;
+  color: #6E7686;
+}

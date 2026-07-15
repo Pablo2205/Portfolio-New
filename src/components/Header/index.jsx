@@ -5,8 +5,10 @@ import Facts from './Facts';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { useLanguage } from '../../i18n';
 
 const Header = () => {
+  const { t } = useLanguage();
   const container = useRef(null);
   gsap.registerPlugin(useGSAP);
 
@@ -59,23 +61,20 @@ const Header = () => {
         <div className="column intro__container blur-effect">
           <div className="header__info">
             <div className="header__info__top">
-              Hello, I am <span className="color__primary">Pablo</span>
+              {t.header.greeting} <span className="color__primary">{t.header.name}</span>
             </div>
             <div className="header__info__middle">
-              <h1 className="primary__title header__title">Software Engenieer</h1>
+              <h1 className="primary__title header__title">{t.header.title}</h1>
               <p className="text__muted header__description">
-              Software Engineer with expertise in application development, infrastructure integration, and IoT/Cloud solutions. 
-              I design and implement scalable, secure, and efficient software by combining strong programming skills with knowledge of system architectures and modern deployment practices. 
-              My experience includes developing web, desktop, and embedded applications, as well as integrating cloud services and connected devices. 
-              I follow agile methodologies and software engineering best practices to deliver reliable, maintainable, and high-quality solutions that align with business needs.
+                {t.header.description}
               </p>
             </div>
             <Facts />
             <div className="header__info__bottom">
               <a href="/CV_Pablo Coria 2026.pdf" target="_blank" rel="noopener noreferrer">
-                <button className="btn">Download CV</button>
+                <button className="btn">{t.header.downloadCV}</button>
               </a>
-              <a href="mailto:pablo.cor1@Icloud.com" className="btn">Email Me</a>
+              <a href="mailto:pablo.cor1@Icloud.com" className="btn">{t.header.emailMe}</a>
             </div>
           </div>
         </div>

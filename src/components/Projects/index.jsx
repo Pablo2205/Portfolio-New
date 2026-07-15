@@ -3,6 +3,7 @@ import "./Projects.css"
 import { sumArray } from '../../helper'
 import { projects } from '../../data'
 import Card from './Card'
+import { useLanguage } from '../../i18n'
 const tabs = [
   {name:"All"},
   {name:"Engineering"},
@@ -10,12 +11,13 @@ const tabs = [
   {name:"Development"},
 ]
 const Projects = () => {
+  const { t } = useLanguage();
   const [displayableProjects,setDisplayableProjects] = useState(projects)
   const [activeIndex,setActiveIndex] = useState(0);
   const [offset,setOffset] = useState(0)
   const [indicatorWidth,setIndicatorWidth] = useState(0);
   const itemsEls = useRef(new Array());
-   
+
   useEffect(()=>{
     const prevEl = itemsEls.current.filter((_,index)=>index < activeIndex);
     setOffset(
@@ -24,7 +26,7 @@ const Projects = () => {
       )
     )
     setIndicatorWidth(itemsEls.current[activeIndex].offsetWidth)
-  },[activeIndex])
+  },[activeIndex, t])
 
   const setProjects = (category) =>{
     if(category === "All"){
@@ -38,7 +40,7 @@ const Projects = () => {
     <section id='projects'>
        <div className="section__wrapper projects__container">
         <div className="section__header center">
-          <h2 className="primary__title">Projects</h2>
+          <h2 className="primary__title">{t.projects.sectionTitle}</h2>
         </div>
         <nav>
           {
@@ -51,11 +53,11 @@ const Projects = () => {
                 }}
                key={index}
               >
-                {tab.name}
+                {t.projects.tabs[tab.name]}
               </button>
             ))
           }
-          <span 
+          <span
           className="active__indicator"
           style={{
             left:`${offset}px`,

@@ -1,8 +1,42 @@
-/* ── GlassBackground v2 ───────────────────────────────────────── */
+/* ── Fondo: gris claro + grilla + plano de ingeniería ─────────── */
 
 .gbg__root {
   position: relative;
   min-height: 100vh;
+  background: var(--bg);
+}
+
+/* Grilla sutil con máscara radial (hero) */
+.gbg__root::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1100px;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 88px 88px;
+  opacity: 0.5;
+  mask-image: radial-gradient(ellipse 75% 65% at 60% 0%, black, transparent);
+  -webkit-mask-image: radial-gradient(ellipse 75% 65% at 60% 0%, black, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Plano de ingeniería + software (brida, bulones, chip, código) */
+.gbg__root::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(1250px, 100%);
+  height: 860px;
+  background: url(../../images/blueprint-light.svg) no-repeat top right;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: linear-gradient(180deg, black 55%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, black 55%, transparent 100%);
 }
 
 .gbg__content {
@@ -10,7 +44,7 @@
   z-index: 2;
 }
 
-/* ── Ambient glow blobs ──────────────────────────────────────── */
+/* ── Halos ambientales azul acero ─────────────────────────────── */
 .gbg__glow {
   position: fixed;
   border-radius: 50%;
@@ -19,7 +53,6 @@
   filter: blur(100px);
 }
 
-/* Top — main hero glow, large teal ellipse */
 .gbg__glow--top {
   width: 900px;
   height: 500px;
@@ -27,50 +60,28 @@
   left: 50%;
   transform: translateX(-50%);
   background: radial-gradient(ellipse,
-    rgba(13, 148, 136, 0.20) 0%,
-    rgba(13, 148, 136, 0.06) 50%,
+    rgba(30, 90, 138, 0.10) 0%,
+    rgba(32, 80, 224, 0.04) 50%,
     transparent 100%
   );
-  animation: glowPulse 8s ease-in-out infinite alternate;
 }
 
-/* Mid — subtle center accent */
-.gbg__glow--mid {
-  width: 500px;
-  height: 400px;
-  top: 40%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: radial-gradient(ellipse,
-    rgba(13, 148, 136, 0.07) 0%,
-    transparent 70%
-  );
-  animation: glowPulse 12s ease-in-out infinite alternate-reverse;
-}
+.gbg__glow--mid { display: none; }
 
-/* Bottom — footer warmth */
 .gbg__glow--bottom {
   width: 600px;
   height: 350px;
   bottom: -80px;
   left: 30%;
   background: radial-gradient(ellipse,
-    rgba(52, 211, 153, 0.08) 0%,
+    rgba(15, 42, 107, 0.06) 0%,
     transparent 70%
   );
-  animation: glowDrift 16s ease-in-out infinite alternate;
-}
-
-@keyframes glowPulse {
-  0%   { opacity: 0.7; transform: translateX(-50%) scale(1); }
-  100% { opacity: 1;   transform: translateX(-50%) scale(1.08); }
-}
-
-@keyframes glowDrift {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(120px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .gbg__glow { animation: none; }
+}
+@media (max-width: 768px) {
+  .gbg__root::after { height: 520px; opacity: .8; }
 }

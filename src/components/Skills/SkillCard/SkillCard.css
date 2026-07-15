@@ -1,103 +1,85 @@
-/* ════════════════════════════════════════════════════════════════
-   SkillCard.css — 2 columnas siempre
-════════════════════════════════════════════════════════════════ */
+/* ── SkillCard — tarjeta blanca estilo cr.studio ──────────────── */
 
 .skill__card {
-    border-radius: var(--border-radius-3);
-    padding: 24px 22px;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-  
-    background: var(--glass-bg);
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
-  }
-  
-  .skill__card::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 12%; right: 12%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(45,212,191,0.18), transparent);
-    pointer-events: none;
-  }
-  
-  .skill__card:hover {
-    background: var(--glass-bg-hover);
-    border-color: var(--glass-border-hover);
-    transform: translateY(-3px);
-    box-shadow: var(--glass-shadow-hover);
-  }
-  
-  /* Category title */
-  .skill__card h3 {
-    font-family: "Syne", sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 18px;
-    text-align: center;
-    background: var(--gradient-title);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  
-  /* SIEMPRE 2 columnas — sin excepciones */
-  .skill__content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px;
-  }
-  
-  .skill__details {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 10px;
-    border-radius: var(--border-radius-2);
-    background: rgba(45, 212, 191, 0.03);
-    border: 1px solid rgba(45, 212, 191, 0.07);
-    transition: var(--transition-fast);
-  }
-  
-  .skill__details:hover {
-    background: rgba(45, 212, 191, 0.07);
-    border-color: rgba(45, 212, 191, 0.16);
-  }
-  
-  .skill__icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
-  
-  .skill__name {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--color-text);
-    line-height: 1.2;
-    /* Evitar desborde en nombres largos */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
-  .skill__level {
-    font-size: 11px;
-    color: var(--color-muted);
-    display: block;
-    margin-top: 1px;
-  }
-  
-  /* En mobile muy chico solo 1 columna si el nombre no entra */
-  @media (max-width: 360px) {
-    .skill__content {
-      grid-template-columns: 1fr !important;
-    }
-  }
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 30px 28px;
+  transition: border-color 250ms, box-shadow 250ms, transform 250ms;
+}
+
+.skill__card:hover {
+  border-color: var(--blue);
+  box-shadow: 0 14px 40px rgba(32, 80, 224, 0.10);
+  transform: translateY(-3px);
+}
+
+/* Título de categoría: etiqueta uppercase con línea azul */
+.skill__card h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 22px;
+}
+.skill__card h3::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--blue);
+  flex: none;
+}
+
+.skill__card .skill__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.skill__card .skill__details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #F7F8FA;
+  border: 1px solid var(--line);
+  transition: var(--transition-fast);
+}
+
+.skill__card .skill__details:hover {
+  background: var(--blue-soft);
+  border-color: var(--blue);
+}
+
+.skill__card .skill__icon {
+  width: 26px;
+  height: 26px;
+  min-height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.skill__card .skill__name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.skill__card .skill__level {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+@media (max-width: 480px) {
+  .skill__card .skill__content { grid-template-columns: 1fr; }
+}

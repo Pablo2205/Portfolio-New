@@ -1,4 +1,4 @@
-/* ── Navbar ───────────────────────────────────────────────────── */
+/* ── Navbar — barra flotante estilo cr.studio ─────────────────── */
 
 .navbar__container {
   position: fixed;
@@ -8,38 +8,38 @@
   z-index: 1000;
   transition: top 400ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  background: rgba(7, 13, 14, 0.80);
-  backdrop-filter: blur(24px) saturate(1.5);
-  -webkit-backdrop-filter: blur(24px) saturate(1.5);
-  border-bottom: 1px solid rgba(45, 212, 191, 0.10);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.40), 0 1px 0 rgba(45,212,191,0.06) inset;
+  background: rgba(243, 244, 246, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 4px 24px rgba(15, 42, 107, 0.05);
 }
 
 .navbar__container.visible {
   top: 0;
 }
 
-/* ── Tab group — horizontal centered links ───────────────────── */
+/* ── Tabs — pill central ──────────────────────────────────────── */
 .tab__group {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;          /* ← fuerza horizontal */
+  flex-direction: row;
   flex-wrap: nowrap;
-  gap: 0.25rem;
-  height: 64px;
+  gap: 6px;
+  height: 68px;
   width: 100%;
-  padding: 0 60px;              /* espacio para el botón hamburger */
+  padding: 0 60px;
   list-style: none;
 }
 
 .tab__item {
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--sans);
   font-size: 14px;
   font-weight: 500;
-  color: var(--color-muted);
-  padding: 8px 16px;
-  border-radius: var(--border-radius-3);
+  color: var(--ink);
+  padding: 8px 18px;
+  border-radius: 999px;
   cursor: pointer;
   transition: color 180ms ease, background 180ms ease;
   white-space: nowrap;
@@ -48,22 +48,22 @@
 }
 
 .tab__item:hover {
-  color: var(--color-primary-bright);
-  background: rgba(45, 212, 191, 0.06);
+  color: var(--blue);
+  background: var(--blue-soft);
 }
 
 .tab__item.active {
-  color: var(--color-primary-bright);
-  background: rgba(13, 148, 136, 0.12);
-  border: 1px solid rgba(45, 212, 191, 0.14);
+  color: var(--blue);
+  background: var(--blue-soft);
+  border: 1px solid transparent;
 }
 
-/* ── Close button — only visible on mobile ───────────────────── */
+/* ── Botón cerrar — solo mobile ───────────────────────────────── */
 .close__btn {
   display: none !important;
 }
 
-/* ── Hamburger ───────────────────────────────────────────────── */
+/* ── Hamburguesa ──────────────────────────────────────────────── */
 .nav__buttons__group {
   position: absolute;
   right: 20px;
@@ -75,21 +75,21 @@
 
 .nav__buttons__group .menu {
   font-size: 22px;
-  color: var(--color-muted);
+  color: var(--ink);
   cursor: pointer;
-  display: none;          /* hidden on desktop */
+  display: none;
   transition: color 180ms ease;
 }
 
 .nav__buttons__group .menu:hover {
-  color: var(--color-primary-bright);
+  color: var(--blue);
 }
 
 /* ── Overlay ──────────────────────────────────────────────────── */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(7, 13, 14, 0.70);
+  background: rgba(17, 21, 32, 0.35);
   backdrop-filter: blur(4px);
   z-index: 999;
   animation: fadeIn 200ms ease;
@@ -101,11 +101,14 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
-   RESPONSIVE — mobile sidebar
+   RESPONSIVE — sidebar mobile
 ══════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
+  .nav__buttons__group {
+    right: 88px;
+  }
+
   .tab__group {
-    /* sidebar drawer */
     position: fixed;
     top: 0;
     right: -100%;
@@ -116,14 +119,11 @@
     align-items: flex-start;
     padding: 80px 20px 40px;
     gap: 4px;
-    background: rgba(7, 13, 14, 0.97);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border-left: 1px solid rgba(45, 212, 191, 0.10);
-    box-shadow: -8px 0 32px rgba(0,0,0,0.5);
+    background: #FFFFFF;
+    border-left: 1px solid var(--line);
+    box-shadow: -16px 0 40px rgba(15, 42, 107, 0.12);
     z-index: 1001;
     transition: right 350ms cubic-bezier(0.16, 1, 0.3, 1);
-    height: 100vh;        /* full height */
   }
 
   .tab__group.show {
@@ -141,7 +141,7 @@
     position: absolute;
     top: 20px;
     right: 16px;
-    color: var(--color-muted);
+    color: var(--gray);
     cursor: pointer;
     font-size: 20px;
     width: 36px;
@@ -149,14 +149,14 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(45,212,191,0.06);
-    border: 1px solid rgba(45,212,191,0.12);
+    background: var(--bg);
+    border: 1px solid var(--line);
     transition: var(--transition-fast);
   }
 
   .close__btn:hover {
-    background: rgba(45,212,191,0.12);
-    color: var(--color-primary-bright);
+    background: var(--blue-soft);
+    color: var(--blue);
   }
 
   .nav__buttons__group .menu {

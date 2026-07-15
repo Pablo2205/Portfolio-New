@@ -9,20 +9,25 @@ import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import GlassBackground from "./components/GlassBackground/GlassBackground"
+import LanguageSwitch from "./components/LanguageSwitch"
+import { LanguageProvider } from "./i18n"
 import "./components/responsive.css"
 
 function App() {
   return (
-    <GlassBackground>
-      <Navbar/>
-      <Header/>
-      <About/>
-      <Services/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
-    </GlassBackground>
+    <LanguageProvider>
+      <GlassBackground>
+        <LanguageSwitch/>
+        <Navbar/>
+        <Header/>
+        <About/>
+        <Services/>
+        <Skills/>
+        <Projects/>
+        <Contact/>
+        <Footer/>
+      </GlassBackground>
+    </LanguageProvider>
   );
 }
 

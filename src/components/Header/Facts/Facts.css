@@ -1,101 +1,39 @@
-/* ── Facts / Counters ─────────────────────────────────────────── */
-
-.fact__container {
-  display: flex;
-  flex-direction: row !important;
-  align-items: flex-start;
-  gap: 2.5rem;
-  margin: 30px 0;
-  flex-wrap: wrap;
-}
+/* ── Facts — métricas estilo hero-meta de cr.studio ───────────── */
 
 .fact__item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  gap: 2px;
+  padding: 20px 32px 0 0;
 }
 
-.count__container {
+.fact__item .count__container {
   display: flex;
-  flex-direction: row !important;
-  align-items: center;
-  gap: 0;
-  line-height: 1;
+  align-items: baseline;
+  gap: 2px;
 }
 
-/* ── Odometer overrides ──────────────────────────────────────── */
-.count__container .odometer.odometer-auto-theme,
-.count__container .odometer.odometer-theme-default,
-.count__container .odometer {
-  font-family: "Syne", sans-serif !important;
-  font-size: 48px !important;
-  font-weight: 900 !important;
-  color: var(--color-white) !important;
-  line-height: 1 !important;
-  display: inline-block !important;
-  vertical-align: middle !important;
-  /* Anular el height fijo que el tema default impone */
-  height: auto !important;
-}
-
-.count__container .odometer .odometer-digit {
-  display: inline-block !important;
-  vertical-align: middle !important;
-}
-
-.count__container .odometer .odometer-digit-inner {
-  display: block !important;
-}
-
-.count__container .odometer .odometer-value {
-  display: block !important;
-}
-
-/* El "+" después del número */
 .fact__item .indicator {
-  font-family: "Syne", sans-serif;
-  font-size: 42px;
-  font-weight: 900;
-  color: var(--color-primary-bright);
-  line-height: 1;
-  margin-left: 3px;
-  display: inline-block;
-  vertical-align: middle;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: -0.02em;
 }
 
-/* Label debajo del número */
 .fact__item .name {
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--color-muted);
+  font-size: 0.72rem;
+  color: var(--gray);
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
-  margin-top: 6px;
-  white-space: nowrap;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
-/* ── Responsive ──────────────────────────────────────────────── */
 @media (max-width: 850px) {
-  .fact__container {
-    justify-content: center;
-    gap: 2rem;
-  }
   .fact__item {
     align-items: center;
+    padding: 16px 0 0;
   }
-  .count__container .odometer.odometer-auto-theme,
-  .count__container .odometer {
-    font-size: 36px !important;
-  }
-  .fact__item .indicator {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 400px) {
-  .fact__container { gap: 1.2rem; }
-  .count__container .odometer.odometer-auto-theme,
-  .count__container .odometer { font-size: 26px !important; }
-  .fact__item .indicator { font-size: 22px; }
+  .fact__item .name { text-align: center; }
 }

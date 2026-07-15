@@ -3,8 +3,10 @@ import "./Facts.css"
 import Odometer from 'react-odometerjs'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react';
+import { useLanguage } from '../../../i18n';
 
 const Facts = () => {
+    const { t } = useLanguage();
     const [experience,setExperience] = useState(0);
     const [projects,setProjects] = useState(0)
     const [clients,setClients] = useState(0)
@@ -40,7 +42,7 @@ const Facts = () => {
           />
           <span className="indicator">+</span>
         </div>
-        <p className="name">Years Of Experience</p>
+        <p className="name">{t.facts.experience}</p>
       </div>
 
       <div className="fact__item">
@@ -50,7 +52,7 @@ const Facts = () => {
           />
           <span className="indicator">+</span>
         </div>
-        <p className="name">Completed Projects</p>
+        <p className="name">{t.facts.projects}</p>
       </div>
 
       <div className="fact__item">
@@ -60,7 +62,7 @@ const Facts = () => {
           />
           <span className="indicator">+</span>
         </div>
-        <p className="name">Technologies employed</p>
+        <p className="name">{t.facts.clients}</p>
       </div>
     </div>
   )
