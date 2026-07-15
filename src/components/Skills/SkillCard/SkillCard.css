@@ -1,11 +1,12 @@
-/* ── SkillCard — tarjeta blanca estilo cr.studio ──────────────── */
+/* ── SkillCard — tarjeta blanca, skills flotando sin recuadros ── */
 
 .skill__card {
   background: var(--bg-2);
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 30px 28px;
+  padding: 36px 40px;
   transition: border-color 250ms, box-shadow 250ms, transform 250ms;
+  height: 100%;
 }
 
 .skill__card:hover {
@@ -19,12 +20,12 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gray);
-  margin-bottom: 22px;
+  margin-bottom: 28px;
 }
 .skill__card h3::before {
   content: '';
@@ -37,49 +38,57 @@
 .skill__card .skill__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 22px 32px;
 }
 
+/* Items flotando: sin fondo, sin borde, sin caja */
 .skill__card .skill__details {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 14px;
-  border-radius: 8px;
-  background: #F7F8FA;
-  border: 1px solid var(--line);
+  gap: 14px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
   transition: var(--transition-fast);
 }
 
 .skill__card .skill__details:hover {
-  background: var(--blue-soft);
-  border-color: var(--blue);
+  background: transparent;
+  border: none;
+  transform: translateX(3px);
+}
+
+.skill__card .skill__details:hover .skill__name {
+  color: var(--blue);
 }
 
 .skill__card .skill__icon {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   min-height: auto;
   object-fit: contain;
   flex-shrink: 0;
 }
 
 .skill__card .skill__name {
-  font-size: 13.5px;
+  font-size: 14.5px;
   font-weight: 600;
   color: var(--ink);
   line-height: 1.25;
   letter-spacing: -0.01em;
+  transition: color 160ms ease;
 }
 
 .skill__card .skill__level {
-  font-size: 10px;
+  font-size: 10.5px;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--gray);
+  color: var(--gray-soft);
 }
 
 @media (max-width: 480px) {
-  .skill__card .skill__content { grid-template-columns: 1fr; }
+  .skill__card { padding: 28px 24px; }
+  .skill__card .skill__content { grid-template-columns: 1fr; gap: 18px; }
 }

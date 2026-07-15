@@ -1,10 +1,15 @@
-/* ── Skills — grilla de categorías 2 columnas (como la versión original) ── */
+/* ── Skills — cuadrantes anchos, 2 por fila ───────────────────── */
+
+/* Contenedor más ancho que el resto de las secciones (como la versión oscura) */
+#skill .section__wrapper {
+  max-width: min(1460px, 100vw);
+}
 
 #skill .skill__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-  align-items: start;
+  gap: 26px;
+  align-items: stretch;
 }
 
 @media (max-width: 900px) {
