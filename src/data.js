@@ -486,7 +486,7 @@ export const experience = [
     title: "Cloud",
     data: [
             {
-              skill: "Amazon Web Services",
+              skill: "AWS",
               level: "Experienced",
               svgIcon: "/images/aws.svg",
           },
@@ -496,7 +496,7 @@ export const experience = [
               svgIcon: "/images/azure.svg",
           },
           {
-              skill: "Google Cloud Platform",
+              skill: "GCP",
               level: "Basic",
               svgIcon: "/images/google.svg",
           },

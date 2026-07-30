@@ -44,25 +44,21 @@ const translations = {
         "I turn technological challenges into solutions that actually run in production. My work is organised around four pillars that combine according to what each project needs: IT infrastructure, software development, hardware, and cloud. Some projects need only one; the interesting ones need all four.",
       items: {
         infra: {
-          label: "Pillar 01",
           title: "IT Infrastructure",
           description:
             "Management, automation and standardisation of on-premise and virtualised IT infrastructure. I administer Windows Server, Active Directory, Hyper-V and VMware environments, and automate operational work with PowerShell and Bash. I design workflows, audits and procedures that cut manual effort, bring order to day-to-day operations and remove repetitive errors — including monitoring, immutable backups and the technical documentation that keeps the environment maintainable.",
         },
         software: {
-          label: "Pillar 02",
           title: "Software Development",
           description:
             "Full software development, at every level. High level: e-commerce, landing pages, websites and business applications built with React, Node and SQL/NoSQL databases. Low level: firmware in C/C++, embedded software on microcontrollers and complex IoT-oriented systems. I cover the whole cycle — architecture, development, testing, version control and deployment — with a focus on code that stays maintainable after delivery.",
         },
         hardware: {
-          label: "Pillar 03",
           title: "Hardware & IoT",
           description:
             "Design and development of custom electronic hardware: schematics, PCB layout, instrumentation and signal conditioning. I build IoT devices, telemetry nodes, and robotics and automation solutions on STM32, ESP32, Arduino and Raspberry Pi platforms. From a working prototype to an integrated product, with its firmware, its communication protocols and its field testing.",
         },
         cloud: {
-          label: "Pillar 04",
           title: "Cloud",
           description:
             "Architecture, migration and operation of cloud solutions on AWS, Azure, GCP and IBM Cloud. I deploy applications and services with containers, connect devices and data sources to the cloud, and automate delivery through CI/CD pipelines. Always with cost, availability and security in mind, so the cloud becomes an operational advantage instead of a surprise invoice.",
