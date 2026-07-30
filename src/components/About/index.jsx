@@ -59,7 +59,7 @@ const About = () => {
                   <div className="id__card__field">
                     <span className="id__card__field__label">{t.about.card.sector}</span>
                     <span className="id__card__field__value" style={{ fontSize: '11px' }}>
-                      SysAdmin · Cloud · IoT · Dev
+                      {t.about.card.sectorValue}
                     </span>
                   </div>
               </div>

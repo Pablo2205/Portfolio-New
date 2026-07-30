@@ -1,8 +1,8 @@
-/* ── Card de proyecto — estilo cr.studio ──────────────────────── */
+/* ── Card de proyecto — estilo cr.studio (rediseño) ───────────── */
 
 .card {
   padding: 0;
-  border-radius: 14px;
+  border-radius: 16px;
   background: var(--bg-2);
   border: 1px solid var(--line);
   transition: border-color 250ms, box-shadow 250ms, transform 250ms;
@@ -11,161 +11,219 @@
   align-items: stretch;
   flex-direction: column;
   justify-content: space-between;
-  animation: zoomIn 400ms;
+  animation: cardIn 420ms cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 1px 2px rgba(15, 42, 107, 0.04);
+  position: relative;
 }
 
-@keyframes zoomIn {
-  0%   { scale: 0.7; }
-  100% { scale: 1; }
+@keyframes cardIn {
+  0%   { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* Hover solo en dispositivos no táctiles */
-@media (hover:hover) and (pointer:fine) {
+@media (hover: hover) and (pointer: fine) {
   .card:hover {
     border-color: var(--blue);
-    box-shadow: 0 14px 40px rgba(32, 80, 224, 0.10);
-    transform: translateY(-3px);
+    box-shadow: 0 18px 48px rgba(32, 80, 224, 0.13);
+    transform: translateY(-4px);
   }
-  .card:hover span {
-    transition: var(--transition);
-    transform: translateY(4px);
+  .card:hover .picture img {
+    transform: scale(1.06);
   }
+  .card:hover .card .title { color: var(--blue); }
 }
 
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card .title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  margin-bottom: 10px;
-}
-
+/* ── Imagen ───────────────────────────────────────────────────── */
 .card .picture {
-  height: 230px;
+  height: 220px;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   background: #F7F8FA;
+  position: relative;
 }
 
+.card .picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Velo suave para que el badge siempre se lea */
+.card .picture::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(17, 21, 32, 0.28) 0%, rgba(17, 21, 32, 0) 42%);
+  pointer-events: none;
+}
+
+/* Badge de categoría sobre la imagen */
+.card .card__category {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue-deep);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(32, 80, 224, 0.18);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* ── Cuerpo ───────────────────────────────────────────────────── */
 .card .card__details {
   flex: 1;
   text-align: left;
-  padding: 1.2rem;
+  padding: 1.35rem 1.35rem 1.25rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+
+.card .card__details .title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 12px;
+  transition: color 200ms ease;
 }
 
 .card .card__details .card__details__top {
   border: none;
 }
 
+/* Descripción: en lugar de cortarse a la mitad, se desvanece */
 .card .card__details .card__details__middle {
+  position: relative;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--line);
-  height: 160px;
+  height: 152px;
   overflow-x: hidden;
   overflow-y: auto;
+  mask-image: linear-gradient(180deg, black calc(100% - 34px), transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, black calc(100% - 34px), transparent 100%);
 }
+
+/* Al hacer hover se puede scrollear cómodo y se quita el fade */
+.card:hover .card__details .card__details__middle {
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+.card .card__details .card__details__middle::-webkit-scrollbar { width: 3px; }
+
 .card .card__details .card__details__middle .description {
-  font-size: 14px;
+  font-size: 13.5px;
   color: var(--gray);
-  line-height: 1.6;
+  line-height: 1.68;
+  white-space: pre-line;
 }
 
 .card .card__details .card__details__bottom {
-  padding: 1rem 0 0;
+  padding: 1.1rem 0 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* ── Stack ────────────────────────────────────────────────────── */
+/* ── Stack — chips horizontales ───────────────────────────────── */
 .card .stack__container {
   flex: 1;
   display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 /* Etiqueta "Stack" como pill azul suave */
 .card .stack__container .stack__left {
   border: none;
-  padding: 0 0.9rem;
+  padding: 0 0.85rem;
   border-radius: 999px;
   background: var(--blue-soft);
   color: var(--blue-deep);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   display: flex;
   align-items: center;
   align-self: flex-start;
-  height: 30px;
+  height: 28px;
+  flex: none;
 }
 
 .card .stack__container .stack__right {
   flex: 1;
+  min-width: 0;
 }
 
+/* Chips en fila, se acomodan solos */
 .card .stack__container .stack__right .stack__box__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
-}
-
-.card .stack__container .stack__right .stack__box__container
-.stack__box .stack__icon__container {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 5px;
-  font-size: 12px;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-.card .stack__container .stack__right .stack__box__container
-.stack__box .stack__icon__container .stack__icon {
-  display: flex;
-  align-items: center;
-}
-
-.card .stack__container .stack__right .stack__box,
-.stack__view__more {
-  border-radius: 8px;
+.card .stack__container .stack__right .stack__box {
+  border-radius: 999px;
   background: #F7F8FA;
   border: 1px solid var(--line);
-  padding: 0.5rem;
+  padding: 5px 11px 5px 8px;
   transition: var(--transition-fast);
+}
+
+.card .stack__container .stack__right .stack__box .stack__icon__container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 6px;
 }
 
 .card .stack__container .stack__right .stack__box:hover {
   background: var(--blue-soft);
   border-color: var(--blue);
 }
+.card .stack__container .stack__right .stack__box:hover .stack__name {
+  color: var(--blue-deep);
+}
 
 .card .stack__name {
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 600;
   color: var(--gray);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  white-space: nowrap;
+  transition: color 160ms ease;
 }
 
 /* ── Ver más stack ────────────────────────────────────────────── */
 .card .stack__view__more {
   width: 100%;
-  padding: 0.6rem 0.5rem;
-  margin-top: 1rem;
+  padding: 0.55rem 0.5rem;
+  margin-top: 0.8rem;
   position: relative;
   font-size: 14px;
   cursor: pointer;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px dashed var(--line);
+  transition: var(--transition-fast);
+}
+.card .stack__view__more:hover {
+  border-color: var(--blue);
+  background: var(--blue-soft);
 }
 
 .card .stack__view__more .more__btn {
@@ -173,9 +231,9 @@
   align-items: center;
   justify-content: center;
   color: var(--blue);
-  font-weight: 600;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 .card .stack__view__more .more__btn::before {
@@ -186,7 +244,8 @@
   position: absolute;
   bottom: 100%;
   right: 0;
-  padding: 1.4rem 1.2rem;
+  margin-bottom: 8px;
+  padding: 1.3rem 1.2rem;
   background: var(--bg-2);
   border-radius: 14px;
   border: 1px solid var(--line);
@@ -197,62 +256,152 @@
   min-width: 240px;
 }
 
-.card .stack__view__more .open__stack__expand__box {
-  display: block;
+.card .stack__view__more .open__stack__expand__box { display: block; }
+
+.card .stack__view__more .stack__expand__box .stack__box__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.card .stack__view__more .stack__expand__box .stack__box {
+  border-radius: 999px;
+  background: #F7F8FA;
+  border: 1px solid var(--line);
+  padding: 5px 11px 5px 8px;
+}
+.card .stack__view__more .stack__expand__box .stack__icon__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
 }
 
 .card .stack__view__more .stack__expand__box .title {
-  margin-bottom: 1rem;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ink);
-}
-
-/* ── Botones ──────────────────────────────────────────────────── */
-.card .button__container {
-  margin-top: 1.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  pointer-events: auto;
-}
-
-.card .button__container .btn {
-  padding: 10px 26px;
-  font-size: 13px;
-}
-
-.card .button__container .btn__share {
-  border: 1px solid var(--line) !important;
-  transition: var(--transition);
-  width: 2.5rem;
-  aspect-ratio: 1/1;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: var(--gray);
-  background: var(--bg-2);
-}
-
-.card .button__container .btn__share:hover {
-  background: var(--blue-soft) !important;
-  border-color: var(--blue) !important;
+  margin-bottom: 0.9rem;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--blue);
 }
 
+/* ══════════════════════════════════════════════════════════════
+   BOTONES — Demo + GitHub, con animación de color (barrido)
+══════════════════════════════════════════════════════════════ */
+.card .button__container {
+  margin-top: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  pointer-events: auto;
+}
+
+.card .card__btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 260ms ease, border-color 260ms ease,
+              box-shadow 260ms ease, transform 260ms ease;
+}
+
+/* Capa de color que barre de izquierda a derecha */
+.card .card__btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: translateX(-101%);
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card .card__btn:hover::before { transform: translateX(0); }
+
+.card .card__btn:hover {
+  transform: translateY(-2px);
+}
+
+.card .card__btn:active { transform: translateY(0); }
+
+.card .card__btn__icon {
+  font-size: 15px;
+  flex: none;
+}
+
+.card .card__btn__label { white-space: nowrap; }
+
+/* Demo — azul lleno → azul profundo */
+.card .card__btn--demo {
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+.card .card__btn--demo::before {
+  background: var(--blue-deep);
+}
+.card .card__btn--demo:hover {
+  border-color: var(--blue-deep);
+  box-shadow: 0 10px 26px rgba(32, 80, 224, 0.30);
+}
+
+/* GitHub — contorno oscuro → se rellena de tinta */
+.card .card__btn--repo {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  -webkit-text-fill-color: var(--ink);
+}
+.card .card__btn--repo::before {
+  background: var(--ink);
+}
+.card .card__btn--repo:hover {
+  border-color: var(--ink);
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  box-shadow: 0 10px 26px rgba(17, 21, 32, 0.22);
+}
+
+/* Si solo hay un botón, no ocupa todo el ancho */
+.card .button__container .card__btn:only-child {
+  flex: 0 1 auto;
+  min-width: 150px;
+}
+
+/* ── Iconos de stack ──────────────────────────────────────────── */
 .stack__icon {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   min-height: auto;
   display: inline-block;
   vertical-align: middle;
   object-fit: contain;
+  flex: none;
 }
 
 .stack__icon__container {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ── Mobile ───────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .card .picture { height: 190px; }
+  .card .card__details { padding: 1.15rem; }
+  .card .card__details .card__details__middle { height: 130px; }
+  .card .card__btn { height: 40px; font-size: 12px; }
 }

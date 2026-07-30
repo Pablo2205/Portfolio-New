@@ -15,16 +15,16 @@
   transform: translateY(-3px);
 }
 
-/* Título de categoría: etiqueta uppercase con línea azul */
+/* Título de categoría: etiqueta uppercase EN AZUL con línea azul */
 .skill__card h3 {
   display: flex;
   align-items: center;
   gap: 12px;
   font-size: 0.76rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gray);
+  color: var(--blue);
   margin-bottom: 28px;
 }
 .skill__card h3::before {
@@ -50,6 +50,7 @@
   border-radius: 0;
   background: transparent;
   border: none;
+  min-width: 0;
   transition: var(--transition-fast);
 }
 
@@ -61,6 +62,10 @@
 
 .skill__card .skill__details:hover .skill__name {
   color: var(--blue);
+}
+
+.skill__card .skill__text {
+  min-width: 0;
 }
 
 .skill__card .skill__icon {
@@ -88,7 +93,19 @@
   color: var(--gray-soft);
 }
 
+/* ── Mobile: SIEMPRE 2 columnas (nunca una debajo de otra) ────── */
 @media (max-width: 480px) {
-  .skill__card { padding: 28px 24px; }
-  .skill__card .skill__content { grid-template-columns: 1fr; gap: 18px; }
+  .skill__card { padding: 26px 20px; }
+  .skill__card .skill__content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 12px;
+  }
+  .skill__card .skill__details { gap: 9px; }
+  .skill__card .skill__icon { width: 24px; height: 24px; }
+  .skill__card .skill__name {
+    font-size: 12.5px;
+    /* nombres largos se acomodan en 2 líneas en vez de desbordar */
+    overflow-wrap: anywhere;
+  }
+  .skill__card .skill__level { font-size: 9.5px; letter-spacing: 0.04em; }
 }

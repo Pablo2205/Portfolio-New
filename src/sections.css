@@ -107,3 +107,73 @@ input:focus, textarea:focus {
   #contact .contact__container { flex-direction: column; }
   #contact .contact__group { width: 100%; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   CONTACT — decoración del cierre de página
+   El tramo final quedaba blanco y plano: acá se retoma el
+   lenguaje visual del hero (trama de puntos + halo azul + línea
+   técnica de cierre) para que la página termine con carácter.
+══════════════════════════════════════════════════════════════ */
+#contact {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-top: 1px solid var(--line);
+}
+
+/* Trama de puntos azules — lado derecho */
+#contact::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -40px;
+  right: -60px;
+  width: min(640px, 78%);
+  height: 620px;
+  background-image: radial-gradient(circle, rgba(32, 80, 224, 0.22) 1.4px, transparent 1.4px);
+  background-size: 26px 26px;
+  opacity: 0.75;
+  mask-image: radial-gradient(ellipse 72% 72% at 88% 32%, black, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 72% 72% at 88% 32%, black, transparent 70%);
+  pointer-events: none;
+}
+
+/* Halo azul difuso detrás del bloque */
+#contact::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: 50%;
+  bottom: -180px;
+  width: min(1200px, 140%);
+  height: 720px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at 50% 55%,
+    rgba(32, 80, 224, 0.10) 0%,
+    rgba(30, 90, 138, 0.055) 40%,
+    transparent 72%
+  );
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Línea técnica de cierre: cota con marcas, igual que un plano */
+#contact .contact__group::after {
+  content: "";
+  display: block;
+  grid-column: 1 / -1;
+  margin-top: 40px;
+  height: 9px;
+  background-image:
+    linear-gradient(90deg, var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(32, 80, 224, 0.35), rgba(32, 80, 224, 0.06));
+  background-size: 44px 9px, 100% 1px;
+  background-position: left top, left top;
+  background-repeat: repeat-x, no-repeat;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  #contact::before { display: none; }
+  #contact .contact__group::after { margin-top: 26px; }
+}

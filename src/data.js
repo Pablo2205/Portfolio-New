@@ -36,7 +36,8 @@ export const projects = [
           Todos los parámetros eléctricos (energía, potencia, tensión, corrientes, THD, etc.) se adquieren en los bornes de salida del transformador, junto con la temperatura del aceite de refrigeración, la temperatura y humedad ambiente, y todos los parámetros eléctricos de cada salida de la SET.
           Toda esta información es recolectada por una unidad integrada de gestión (UIG), que la almacena en una base de datos local organizada por grupo de sensores.
           Para facilitar el acceso, SmartSET cuenta con una página web embebida accesible localmente desde cualquier dispositivo móvil vía Wi-Fi, lo que permite a los operadores de mantenimiento consultar el estado actual de la SET y sus registros históricos. `,
-        demoLink: "https://github.com/Pablo2205/SmartSet-Project",
+        demoLink: "",
+        repoLink: "https://github.com/Pablo2205/SmartSet-Project",
       },
       stack:[
         {
@@ -78,7 +79,8 @@ export const projects = [
         La sonda MEMS transmite la información de forma digital, lo que permite intercambiarla libremente por otras de la misma tecnología sin ajustes.
         La sonda PT100 usa configuración de 3 hilos para compensar automáticamente la longitud del cable gracias a su amplificación interna de señal.
         Además, este módulo cuenta con conectividad Bluetooth y NFC para integrarse a la plataforma Smart-SET. `,
-        demoLink: "https://github.com/Pablo2205/UAS-THT",
+        demoLink: "",
+        repoLink: "https://github.com/Pablo2205/UAS-THT",
       },
       stack:[
         {
@@ -116,7 +118,8 @@ export const projects = [
         Monitorea el funcionamiento del HOST actuando como "WatchDOG": realiza un "Hard Reset" del SBC si lo detecta fuera de servicio.
         Dentro del sistema Smart Set, garantiza la correcta alimentación y el monitoreo de los módulos TEA y UIG.
         Puede usarse en otros sistemas industriales como fuente ininterrumpida con montaje en riel DIN. `,
-        demoLink: "https://github.com/Pablo2205/UPS-Microelectronics",
+        demoLink: "",
+        repoLink: "https://github.com/Pablo2205/UPS-Microelectronics",
       },
       stack:[
         {
@@ -152,8 +155,9 @@ export const projects = [
         `La Unidad de Medición del Transformador de Potencia (TEA) es un módulo diseñado para adquirir datos eléctricos del transformador de distribución.
         Esta unidad usa tecnología MEMS para adquirir y registrar temperatura y humedad ambiente.
         También cuenta con un puerto para conectar una sonda PT100 remota que mide la temperatura del aceite de refrigeración del transformador. `,
+        demoLink: "",
+        repoLink: "https://github.com/Pablo2205/TEA-Module",
         },
-      demoLink: "https://github.com/Pablo2205/TEA-Module",
       stack:[
         {
           name:"PCB Design",
@@ -188,8 +192,9 @@ export const projects = [
         `POW forma parte de un sistema de medición remota compuesto por sensores y sistemas de comunicación, y puede funcionar como módulo independiente en otros tipos de sistemas e instalaciones como fuente de alimentación.
         Su principal característica es su amplísimo rango de operación (60–440 V CA).
         Su función principal es alimentar los distintos componentes del sistema Smart Set: la UIG, la TEA y la UAS de Temperatura y Humedad. `,
+        demoLink: "",
+        repoLink: "https://github.com/Pablo2205/POW-Module",
         },
-      demoLink: "https://github.com/Pablo2205/POW-Module",
       stack:[
         {
           name:"PCB Design",
@@ -225,7 +230,8 @@ export const projects = [
         El sistema se basa en una red de sensores que miden las propiedades físicas de los residuos y ayudan a determinar el objeto a clasificar.
         Es capaz de clasificar residuos en cuatro categorías: metales, plásticos, papel y vidrio.
         Realiza la clasificación en tiempo real y de forma autónoma. `,
-        demoLink: "https://github.com/Pablo2205/Waste-Sorting-System",
+        demoLink: "",
+        repoLink: "https://github.com/Pablo2205/Waste-Sorting-System",
       },
       stack:[
         {
@@ -258,7 +264,8 @@ export const projects = [
         description_es:
         `Portfolio web personal, diseñado para mostrar mis habilidades y proyectos realizados, con la opción de contactarme mediante formulario y ver mis redes.
         Desarrollado con React y publicado en Vercel Hosting. `,
-        demoLink: `https://pcoria.com`,
+        demoLink: "https://pcoria.com",
+        repoLink: "https://github.com/Pablo2205/Portfolio-Dig",
       },
       stack:[
         {
@@ -282,14 +289,15 @@ export const projects = [
     {
       id:8,
       title: 'Ecommerce Website',
-      image: '/images/projectsImages/ecommerce.png',
+      image: '/images/projectsImages/ecomerce.png',
       category:"Development",
       data:{
         description: 
         `Ecommerce website for selling products online. Invite digital products.`,
         description_es:
         `Sitio de e-commerce para la venta de productos online. Invitaciones y productos digitales. `,
-        demoLink: "https://veintidos.vercel.app",
+        demoLink: "https://veintidos-ecomerce.vercel.app",
+        repoLink: "",
       },
       stack:[
         {
@@ -318,7 +326,8 @@ export const projects = [
         description_es:
         `Programa web para generar claves seguras aleatorias, permitiendo seleccionar la complejidad según la longitud y los caracteres utilizados.
         También permite copiar las claves al portapapeles. `,
-        demoLink: "https://github.com/Pablo2205/Password-Generate",
+        demoLink: "",
+        repoLink: "https://github.com/Pablo2205/Password-Generate",
       },
       stack:[
         {
@@ -337,7 +346,8 @@ export const projects = [
         `Build a low-cost, low-power network attached storage (NAS) system using a Raspberry Pi, allowing file sharing between multiple devices connected to a local network or even remotely.`,
         description_es:
         `Construcción de un sistema de almacenamiento en red (NAS) de bajo costo y bajo consumo usando una Raspberry Pi, permitiendo compartir archivos entre múltiples dispositivos conectados a la red local o incluso de forma remota. `,
-        demoLink: "https://github.com/Pablo2205/NAS-Server-with-Raspberry-Pi",
+        demoLink: "",
+        repoLink: "https://github.com/Pablo2205/NAS-Server-with-Raspberry-Pi",
       },
       stack:[
         {
@@ -438,7 +448,7 @@ export const experience = [
       ],
   },    
   {
-    title: "Infraestructures",
+    title: "Infrastructure",
       data: [
           {
               skill: "Windows Server",

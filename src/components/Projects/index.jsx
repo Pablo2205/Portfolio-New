@@ -74,7 +74,9 @@ const Projects = () => {
                image={project.image}
                data={project.data}
                stack={project.stack}
-               DemoLink={project.data.demoLink}
+               category={project.category}
+               demoLink={project.data.demoLink}
+               repoLink={project.data.repoLink}
                key={index}
               />
             ))

@@ -1,6 +1,6 @@
 /* ── Skills — cuadrantes anchos, 2 por fila ───────────────────── */
 
-/* Contenedor más ancho que el resto de las secciones (como la versión oscura) */
+/* Contenedor más ancho que el resto de las secciones */
 #skill .section__wrapper {
   max-width: min(1460px, 100vw);
 }
@@ -12,6 +12,24 @@
   align-items: stretch;
 }
 
+/* Si la cantidad de categorías es impar, la última ocupa el ancho
+   completo en lugar de dejar un hueco blanco al costado */
+#skill .skill__container > .skill__card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+#skill .skill__container > .skill__card:last-child:nth-child(odd) .skill__content {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1100px) {
+  #skill .skill__container > .skill__card:last-child:nth-child(odd) .skill__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   #skill .skill__container { grid-template-columns: 1fr; }
+  #skill .skill__container > .skill__card:last-child:nth-child(odd) .skill__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
