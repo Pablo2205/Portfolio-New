@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import "./About.css"
-import profile2 from '../../images/profile-2.png'
+import { profileMemoji } from '../../images'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '../../i18n'
@@ -39,7 +39,7 @@ const About = () => {
 
             {/* Photo */}
             <div className="id__card__photo">
-              <img src={profile2} alt="Pablo Coria" />
+              <img src={profileMemoji} alt="Pablo Coria" />
             </div>
 
             {/* Info strip */}
