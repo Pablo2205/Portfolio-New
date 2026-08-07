@@ -203,6 +203,7 @@
   width: 100%;
   height: auto;
   object-fit: contain;
+  border-radius: var(--border-radius-4);
   mask-image: none;
   -webkit-mask-image: none;
   filter: drop-shadow(0 24px 40px rgba(15, 42, 107, 0.14));
