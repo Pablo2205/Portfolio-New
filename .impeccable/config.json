@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "instrument sans",
+        "createdAt": "2026-08-17T19:01:23.217Z",
+        "reason": "User explicitly asked to revert to Instrument Sans/Serif after rejecting a more distinctive display font"
+      }
+    ]
+  }
+}

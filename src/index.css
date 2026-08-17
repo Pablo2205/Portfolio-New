@@ -1,20 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@1&display=swap');
 
 /* ══════════════════════════════════════════════════════════════
-   TOKENS — sistema cr.studio (azul / gris claro / Instrument)
+   TOKENS — claro por defecto, oscuro por toggle (data-theme="dark")
+   Los dos temas comparten el mismo lenguaje visual (plano técnico,
+   glow azul); lo que cambia es el fondo, la superficie y cuánto se
+   nota el glow (--glow-strength), no la estructura del sitio.
 ══════════════════════════════════════════════════════════════ */
 :root {
   --bg:        #F3F4F6;
   --bg-2:      #FFFFFF;
+  --bg-3:      #EEF0F3;
+  --bg-rgb:    243, 244, 246;
   --ink:       #111520;
   --gray:      #7A8090;
   --gray-soft: #AEB4C0;
-  --line:      #E0E3E9;
-  --blue:      #2050E0;
-  --blue-deep: #0F2A6B;
-  --blue-soft: #E8EDFB;
+  --line:        #E0E3E9;
+  --line-strong: #C7CCD6;
+
+  --blue:            #2050E0;
+  --blue-rgb:        32, 80, 224;
+  --blue-bright:     #0F2A6B;
+  --blue-bright-rgb: 15, 42, 107;
+  --blue-deep:       #0F2A6B;
+  --blue-soft:       #E8EDFB;
+
+  /* Swatch reservada para logos de marca con relleno oscuro
+     (Vercel, GitHub, Next.js) que quedarían poco legibles sueltos */
+  --chip:      #F7F8FA;
+  --chip-ink:  #4A5164;
+  --chip-line: rgba(15, 23, 42, 0.08);
+
+  /* Plano técnico + intensidad del glow ambiental: bajo en claro,
+     protagonista en oscuro. Un solo número controla ambos. */
+  --blueprint-svg: url(./images/blueprint-light.svg);
+  --glow-strength: 0.4;
+  --id-photo-gradient: linear-gradient(160deg, #0E2A47 0%, #1E5A8A 60%, #2C6E9B 100%);
+
   --sans:  'Instrument Sans', sans-serif;
   --serif: 'Instrument Serif', serif;
+  --display: var(--sans);
+  --mono:    var(--sans);
 
   /* ── compat con nombres legacy usados en componentes ── */
   --bg-base:              var(--bg);
@@ -41,7 +66,7 @@
   --color-ui-1:           var(--bg);
   --color-ui-2:           var(--bg-2);
   --color-success:        var(--blue);
-  --color-off-white:      #F7F8FA;
+  --color-off-white:      var(--chip);
   --card-rgb:             255, 255, 255;
   --card-border-rgb:      224, 227, 233;
 
@@ -58,6 +83,48 @@
   --gradient-1:     linear-gradient(140deg, #0F2A6B 0%, #1B44BE 60%, #2050E0 100%);
   --gradient-teal:  linear-gradient(140deg, #0F2A6B 0%, #2050E0 100%);
   --gradient-title: none;
+}
+
+/* ── Tema oscuro — mismo sistema de tokens, otros valores ─────── */
+:root[data-theme="dark"] {
+  --bg:        #090C12;
+  --bg-2:      #12151F;
+  --bg-3:      #1B1F2C;
+  --bg-rgb:    9, 12, 18;
+  --ink:       #F1F4FB;
+  --gray:      #97A0B7;
+  --gray-soft: #5B6478;
+  --line:        rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.16);
+
+  --blue:            #4F80FF;
+  --blue-rgb:        79, 128, 255;
+  --blue-bright:     #8FB4FF;
+  --blue-bright-rgb: 143, 180, 255;
+  --blue-deep:       #12275E;
+  --blue-soft:       rgba(79, 128, 255, 0.16);
+
+  --chip:      #EEF2FB;
+  --chip-ink:  #22293C;
+  --chip-line: rgba(15, 23, 42, 0.12);
+
+  --blueprint-svg: url(./images/blueprint-dark.svg);
+  --glow-strength: 1;
+  --id-photo-gradient: linear-gradient(160deg, #0A1930 0%, #163B6E 55%, #2E63B0 100%);
+
+  --glass-bg:             var(--bg-2);
+  --glass-bg-hover:       var(--bg-3);
+  --glass-border:         var(--line);
+  --glass-border-hover:   var(--blue);
+  --glass-shadow:         0 1px 2px rgba(0, 0, 0, 0.22);
+  --glass-shadow-hover:   0 14px 40px rgba(var(--blue-rgb), 0.16);
+
+  --color-off-white:      var(--chip);
+  --card-rgb:             18, 21, 31;
+  --card-border-rgb:      255, 255, 255;
+
+  --gradient-1:     linear-gradient(140deg, #12275E 0%, #2E5CD1 60%, #4F80FF 100%);
+  --gradient-teal:  linear-gradient(140deg, #12275E 0%, #4F80FF 100%);
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -96,6 +163,20 @@ body {
   line-height: 1.6;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Contenedor de los selectores fijos arriba a la derecha (idioma + tema) */
+.top__controls {
+  position: fixed;
+  top: 14px;
+  right: 22px;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 768px) {
+  .top__controls { top: 12px; right: 14px; gap: 6px; }
 }
 
 a { cursor: pointer; display: block; color: var(--ink); text-decoration: none; }
@@ -150,11 +231,12 @@ button { -webkit-text-fill-color: inherit; color: inherit; }
   transition: var(--transition);
 }
 .btn__primary:hover {
-  background: var(--blue-deep);
-  border-color: var(--blue-deep);
+  background: var(--blue);
+  border-color: var(--blue-bright);
   color: #fff;
   -webkit-text-fill-color: #fff;
-  box-shadow: 0 8px 24px rgba(32, 80, 224, 0.28);
+  filter: brightness(1.12);
+  box-shadow: 0 8px 28px rgba(var(--blue-rgb), 0.38);
   transform: translateY(-2px);
 }
 
@@ -173,7 +255,7 @@ button { -webkit-text-fill-color: inherit; color: inherit; }
   letter-spacing: -0.04em;
 }
 
-/* Título de sección estilo cr.studio: "/Título" */
+/* Título de sección: "/Título" con leve glow, tipografía display */
 .primary__title {
   font-family: var(--sans);
   font-size: clamp(2rem, 4.5vw, 3.2rem);
@@ -220,14 +302,15 @@ button { -webkit-text-fill-color: inherit; color: inherit; }
   border-color: var(--blue);
 }
 
-/* halo azul sutil (reemplaza el glow teal) */
+/* halo azul (glow eléctrico, más presente sobre fondo oscuro) */
 .blur-effect { position: relative; }
 .blur-effect::before {
   content: "";
   position: absolute;
   width: 480px; height: 480px;
-  background: radial-gradient(circle, rgba(32, 80, 224, 0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(var(--blue-rgb), 0.16) 0%, transparent 70%);
   filter: blur(60px);
+  opacity: var(--glow-strength);
   z-index: -1;
   pointer-events: none;
 }

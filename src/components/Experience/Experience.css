@@ -1,0 +1,124 @@
+/* ── Experience — timeline vertical, más reciente primero ─────── */
+
+#experience .timeline {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Línea vertical que conecta los puestos */
+#experience .timeline::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 5px;
+  width: 1px;
+  background: var(--line);
+}
+
+#experience .timeline__item {
+  position: relative;
+  display: flex;
+  gap: 28px;
+  padding-bottom: 40px;
+}
+#experience .timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+#experience .timeline__rail {
+  flex: none;
+  width: 11px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+#experience .timeline__dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--bg-2);
+  border: 2px solid var(--gray-soft);
+  z-index: 1;
+}
+#experience .timeline__item.is-current .timeline__dot {
+  background: var(--blue);
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px var(--blue-soft);
+}
+
+#experience .timeline__content { flex: 1; min-width: 0; }
+
+#experience .timeline__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+
+#experience .timeline__role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+#experience .timeline__period {
+  flex: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gray);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#experience .timeline__badge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-soft);
+  border-radius: 999px;
+  padding: 3px 9px;
+}
+
+#experience .timeline__company {
+  margin-top: 4px;
+  font-size: 0.88rem;
+  color: var(--gray);
+}
+
+#experience .timeline__bullets {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#experience .timeline__bullets li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--gray);
+}
+#experience .timeline__bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 1px;
+  background: var(--blue);
+}
+
+@media (max-width: 600px) {
+  #experience .timeline__item { gap: 18px; }
+  #experience .timeline__top { flex-direction: column; align-items: flex-start; }
+}

@@ -23,6 +23,9 @@ const Card = (props) => {
         {props.category && (
           <span className="card__category">{categoryLabel}</span>
         )}
+        {props.featured && (
+          <span className="card__featured">{t.projects.featured}</span>
+        )}
       </div>
 
       <div className="card__details">

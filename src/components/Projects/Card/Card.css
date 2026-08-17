@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: space-between;
   animation: cardIn 420ms cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 1px 2px rgba(15, 42, 107, 0.04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
@@ -25,7 +25,7 @@
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     border-color: var(--blue);
-    box-shadow: 0 18px 48px rgba(32, 80, 224, 0.13);
+    box-shadow: 0 18px 48px rgba(var(--blue-rgb), 0.20);
     transform: translateY(-4px);
   }
   .card:hover .picture img {
@@ -39,7 +39,7 @@
   height: 220px;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
-  background: #F7F8FA;
+  background: var(--bg-3);
   position: relative;
 }
 
@@ -72,10 +72,27 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--blue-deep);
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(32, 80, 224, 0.18);
+  background: rgba(238, 242, 251, 0.92);
+  border: 1px solid rgba(var(--blue-rgb), 0.22);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+}
+
+/* Producto propio o de cliente real, no solo un ejercicio técnico */
+.card .card__featured {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--blue);
+  box-shadow: 0 4px 14px rgba(var(--blue-rgb), 0.4);
 }
 
 /* ── Cuerpo ───────────────────────────────────────────────────── */
@@ -151,7 +168,7 @@
   padding: 0 0.85rem;
   border-radius: 999px;
   background: var(--blue-soft);
-  color: var(--blue-deep);
+  color: var(--blue-bright);
   font-size: 0.64rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -175,10 +192,13 @@
   gap: 6px;
 }
 
+/* Chip claro fijo — necesario para que logos de relleno oscuro
+   (Vercel, GitHub, Next.js) se mantengan legibles sobre el fondo
+   oscuro del sitio, sin importar el tema */
 .card .stack__container .stack__right .stack__box {
   border-radius: 999px;
-  background: #F7F8FA;
-  border: 1px solid var(--line);
+  background: var(--chip);
+  border: 1px solid var(--chip-line);
   padding: 5px 11px 5px 8px;
   transition: var(--transition-fast);
 }
@@ -191,17 +211,17 @@
 }
 
 .card .stack__container .stack__right .stack__box:hover {
-  background: var(--blue-soft);
   border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-soft);
 }
 .card .stack__container .stack__right .stack__box:hover .stack__name {
-  color: var(--blue-deep);
+  color: var(--blue);
 }
 
 .card .stack__name {
   font-size: 11.5px;
   font-weight: 600;
-  color: var(--gray);
+  color: var(--chip-ink);
   letter-spacing: 0.01em;
   line-height: 1;
   white-space: nowrap;
@@ -249,7 +269,7 @@
   background: var(--bg-2);
   border-radius: 14px;
   border: 1px solid var(--line);
-  box-shadow: 0 24px 60px rgba(15, 42, 107, 0.14);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: none;
   z-index: 5;
@@ -265,8 +285,8 @@
 }
 .card .stack__view__more .stack__expand__box .stack__box {
   border-radius: 999px;
-  background: #F7F8FA;
-  border: 1px solid var(--line);
+  background: var(--chip);
+  border: 1px solid var(--chip-line);
   padding: 5px 11px 5px 8px;
 }
 .card .stack__view__more .stack__expand__box .stack__icon__container {
@@ -343,7 +363,7 @@
 
 .card .card__btn__label { white-space: nowrap; }
 
-/* Demo — azul lleno → azul profundo */
+/* Demo — azul lleno → barrido a azul brillante (se "enciende") */
 .card .card__btn--demo {
   background: var(--blue);
   border: 1px solid var(--blue);
@@ -351,14 +371,16 @@
   -webkit-text-fill-color: #fff;
 }
 .card .card__btn--demo::before {
-  background: var(--blue-deep);
+  background: var(--blue-bright);
 }
 .card .card__btn--demo:hover {
-  border-color: var(--blue-deep);
-  box-shadow: 0 10px 26px rgba(32, 80, 224, 0.30);
+  border-color: var(--blue-bright);
+  color: var(--blue-deep);
+  -webkit-text-fill-color: var(--blue-deep);
+  box-shadow: 0 10px 30px rgba(var(--blue-rgb), 0.35);
 }
 
-/* GitHub — contorno oscuro → se rellena de tinta */
+/* GitHub — contorno → se rellena de claro (invertido para fondo oscuro) */
 .card .card__btn--repo {
   background: transparent;
   border: 1px solid var(--line);
@@ -370,9 +392,9 @@
 }
 .card .card__btn--repo:hover {
   border-color: var(--ink);
-  color: #fff;
-  -webkit-text-fill-color: #fff;
-  box-shadow: 0 10px 26px rgba(17, 21, 32, 0.22);
+  color: var(--bg);
+  -webkit-text-fill-color: var(--bg);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
 }
 
 /* Si solo hay un botón, no ocupa todo el ancho */

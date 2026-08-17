@@ -1,4 +1,4 @@
-/* ── Fondo: gris claro + grilla + plano de ingeniería ─────────── */
+/* ── Fondo: navy casi negro + grilla de circuito + plano glow ─── */
 
 .gbg__root {
   position: relative;
@@ -6,24 +6,24 @@
   background: var(--bg);
 }
 
-/* Grilla sutil con máscara radial (hero) */
+/* Grilla sutil con máscara radial (hero) — puntos, no líneas:
+   lectura de "placa perforada" en vez de cuadrícula genérica */
 .gbg__root::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 1100px;
-  background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 88px 88px;
-  opacity: 0.5;
+  background-image: radial-gradient(rgba(var(--blue-rgb), 0.35) 1.2px, transparent 1.2px);
+  background-size: 42px 42px;
+  opacity: calc(0.6 * var(--glow-strength));
   mask-image: radial-gradient(ellipse 75% 65% at 60% 0%, black, transparent);
   -webkit-mask-image: radial-gradient(ellipse 75% 65% at 60% 0%, black, transparent);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Plano de ingeniería + software (brida, bulones, chip, código) */
+/* Plano de ingeniería + software (brida, bulones, chip, código) —
+   blueprint-light.svg en tema claro, blueprint-dark.svg + glow en oscuro */
 .gbg__root::after {
   content: "";
   position: absolute;
@@ -31,8 +31,9 @@
   right: 0;
   width: min(1250px, 100%);
   height: 860px;
-  background: url(../../images/blueprint-light.svg) no-repeat top right;
+  background: var(--blueprint-svg) no-repeat top right;
   background-size: contain;
+  filter: drop-shadow(0 0 26px rgba(var(--blue-rgb), 0.14));
   pointer-events: none;
   z-index: 0;
   mask-image: linear-gradient(180deg, black 55%, transparent 100%);
@@ -55,17 +56,15 @@
   z-index: 0;
 }
 
-/* Grilla técnica que reaparece desde abajo */
+/* Grilla técnica que reaparece desde abajo (misma trama de puntos) */
 .gbg__deco--grid {
   left: 0;
   right: 0;
   bottom: 0;
   height: 1500px;
-  background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 88px 88px;
-  opacity: 0.55;
+  background-image: radial-gradient(rgba(var(--blue-rgb), 0.3) 1.2px, transparent 1.2px);
+  background-size: 42px 42px;
+  opacity: calc(0.6 * var(--glow-strength));
   mask-image: radial-gradient(ellipse 85% 62% at 22% 100%, black 10%, transparent 72%);
   -webkit-mask-image: radial-gradient(ellipse 85% 62% at 22% 100%, black 10%, transparent 72%);
 }
@@ -76,22 +75,24 @@
   bottom: 190px;
   width: min(1080px, 96%);
   height: 820px;
-  background: url(../../images/blueprint-light.svg) no-repeat bottom left;
+  background: var(--blueprint-svg) no-repeat bottom left;
   background-size: contain;
   transform: scaleX(-1);
   transform-origin: center;
-  opacity: 0.5;
+  opacity: 0.55;
+  filter: drop-shadow(0 0 22px rgba(var(--blue-rgb), 0.12));
   mask-image: linear-gradient(0deg, black 38%, transparent 92%);
   -webkit-mask-image: linear-gradient(0deg, black 38%, transparent 92%);
 }
 
-/* ── Halos ambientales azul acero ─────────────────────────────── */
+/* ── Halos ambientales — glow eléctrico, no gris acero ────────── */
 .gbg__glow {
   position: fixed;
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
-  filter: blur(100px);
+  filter: blur(110px);
+  opacity: var(--glow-strength);
 }
 
 .gbg__glow--top {
@@ -101,13 +102,28 @@
   left: 50%;
   transform: translateX(-50%);
   background: radial-gradient(ellipse,
-    rgba(30, 90, 138, 0.10) 0%,
-    rgba(32, 80, 224, 0.04) 50%,
+    rgba(var(--blue-rgb), 0.20) 0%,
+    rgba(var(--blue-rgb), 0.06) 50%,
     transparent 100%
   );
 }
 
-.gbg__glow--mid { display: none; }
+/* Segundo halo, más abajo, para que la página no se apague hacia
+   el final (proyectos/skills) — antes estaba apagado por completo.
+   position: absolute (no fixed) para que viaje con el scroll y quede
+   ubicado a la altura real de esas secciones, no pegado al viewport. */
+.gbg__glow--mid {
+  position: absolute;
+  width: 760px;
+  height: 760px;
+  top: 2200px;
+  right: -260px;
+  background: radial-gradient(ellipse,
+    rgba(var(--blue-rgb), 0.14) 0%,
+    transparent 70%
+  );
+}
+
 .gbg__glow--bottom { display: none; }
 
 @media (prefers-reduced-motion: reduce) {

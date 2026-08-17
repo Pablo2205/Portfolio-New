@@ -26,6 +26,12 @@
     user-select: none;
 }
 
+#testimonial .client__role{
+    color: var(--gray);
+    font-size: 12px;
+    display: block;
+}
+
 #testimonial .client__review{
     color: var(--color-text);
     font-weight: 300;

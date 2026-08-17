@@ -1,9 +1,9 @@
-/* ── Footer — gris carbón estilo Tecnon ───────────────────────── */
+/* ── Footer — mismo navy oscuro que el resto del sitio ────────── */
 
 #footer {
   position: relative;
-  border-top: 1px solid #2E323A;
-  background: #1B1E24;
+  border-top: 1px solid var(--line);
+  background: var(--bg);
 }
 
 #footer .section__wrapper {
@@ -31,7 +31,7 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #8A93A5;
+  color: var(--gray);
   transition: var(--transition-fast);
   cursor: pointer;
   white-space: nowrap;
@@ -43,14 +43,14 @@
 
 #footer .nav__link__container .tab__item:hover,
 #footer .nav__link__container a:hover {
-  color: #8FB8DC;
+  color: var(--blue-bright);
   background: none;
 }
 
 #footer .nav__link__container .tab__item.active {
   background: none;
   border: none;
-  color: #8FB8DC;
+  color: var(--blue-bright);
 }
 
 /* Redes */
@@ -62,17 +62,17 @@
 }
 
 #footer .social__handles {
-  color: #8A93A5;
-  background: #23262B;
-  border-color: #3A4150;
+  color: var(--gray);
+  background: var(--bg-2);
+  border-color: var(--line);
 }
 #footer .social__handles:hover {
-  color: #8FB8DC;
-  border-color: #8FB8DC;
+  color: var(--blue-bright);
+  border-color: var(--blue-bright);
 }
 
 /* Copyright */
 #footer .copyright__container p {
   font-size: 0.8rem;
-  color: #6E7686;
+  color: var(--gray-soft);
 }

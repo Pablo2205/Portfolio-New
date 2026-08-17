@@ -1,0 +1,40 @@
+/* ── Selector de tema — pill circular, vive en .top__controls junto
+   al selector de idioma (ver index.css) ─────────────────────────── */
+
+.theme__switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  background: rgba(var(--bg-rgb), 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  color: var(--gray);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.theme__switch:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+  transform: translateY(-1px);
+}
+
+.theme__switch svg {
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .theme__switch {
+    width: 30px;
+    height: 30px;
+  }
+  .theme__switch svg {
+    font-size: 13px;
+  }
+}

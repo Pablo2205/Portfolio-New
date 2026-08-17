@@ -20,7 +20,7 @@
   position: relative;
   background: var(--bg-2);
   border: 1px solid var(--line);
-  box-shadow: 0 24px 60px rgba(15, 42, 107, 0.10);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
   transform: rotate(-3deg);
   transition: var(--transition);
   cursor: pointer;
@@ -29,7 +29,7 @@
 .id__card:hover {
   transform: rotate(0deg) translateY(-6px);
   border-color: var(--blue);
-  box-shadow: 0 30px 70px rgba(15, 42, 107, 0.14);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55), 0 0 40px rgba(var(--blue-rgb), 0.12);
 }
 
 /* Barra superior */
@@ -39,7 +39,7 @@
   justify-content: space-between;
   padding: 16px 18px 12px;
   border-bottom: 1px solid var(--line);
-  background: #F7F8FA;
+  background: var(--bg-3);
 }
 
 .id__card__brand {
@@ -78,8 +78,8 @@
   overflow: hidden;
   position: relative;
   background:
-    url(../../images/blueprint-dark.svg) center / 700px auto no-repeat,
-    linear-gradient(160deg, #0E2A47 0%, #1E5A8A 60%, #2C6E9B 100%);
+    var(--blueprint-svg) center / 700px auto no-repeat,
+    var(--id-photo-gradient);
 }
 
 .id__card__photo img {

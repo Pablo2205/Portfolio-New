@@ -8,6 +8,7 @@ import { TbBrandReactNative } from "react-icons/tb";
 
 export const menu = [
     {id:"about"},
+    {id:"experience"},
     {id:"services"},
     {id:"skill"},
     {id:"projects"},
@@ -254,18 +255,54 @@ export const projects = [
     },
     {
       id:7,
-      title: 'Portfolio Web',
-      image: '/images/projectsImages/portfolio.png',
+      featured: true,
+      title: 'Milagros Videla — Portfolio',
+      image: '/images/projectsImages/milagros-portfolio.png',
       category:"Development",
       data:{
-        description: 
-        `Personal web portfolio, designed to showcase my skills and completed projects, with the option to contact me via the contact form and view my social media accounts.
-        It was developed with React and Tailwind and published on Vercel Hosting.`,
+        description:
+        `Portfolio website built for Milagros Videla, Community Manager & Content Creator: bio, services and a case-study gallery of her social media and content work, in a burgundy/black/cream palette.
+        A client project I built end to end — design, content structure and animated sections.`,
         description_es:
-        `Portfolio web personal, diseñado para mostrar mis habilidades y proyectos realizados, con la opción de contactarme mediante formulario y ver mis redes.
-        Desarrollado con React y publicado en Vercel Hosting. `,
-        demoLink: "https://pcoria.com",
-        repoLink: "https://github.com/Pablo2205/Portfolio-Dig",
+        `Sitio de portfolio hecho para Milagros Videla, Community Manager y Creadora de Contenido: bio, servicios y una galería de casos de su trabajo en redes y contenido, en paleta bordo/negro/crema.
+        Un proyecto para clienta que armé de punta a punta: diseño, estructura de contenido y secciones animadas. `,
+        demoLink: "https://milagros-videla-portfolio.vercel.app",
+        repoLink: "https://github.com/Pablo2205/milagros-videla-portfolio",
+      },
+      stack:[
+        {
+          name:"Next.js",
+          svgIcon: "/images/nextjs.svg",
+        },
+        {
+          name:"React",
+          svgIcon: "/images/react.svg",
+        },
+        {
+          name:"Tailwind CSS",
+          svgIcon: "/images/tailwindcss.svg",
+        },
+        {
+          name:"Vercel",
+          svgIcon: "/images/vercel.svg",
+        },
+      ]
+    },
+    {
+      id:8,
+      featured: true,
+      title: 'veintidós — Invitaciones Digitales',
+      image: '/images/projectsImages/veintidos.png',
+      category:"Development",
+      data:{
+        description:
+        `E-commerce platform for digital wedding and quinceañera invitations in Argentina. Customers browse live demos, customize their event page — countdown, RSVP, map, music — and share it as a single link, with WhatsApp as the main contact and confirmation channel.
+         Built as my own product end to end: storefront, per-style demo pages and order flow.`,
+        description_es:
+        `Plataforma de e-commerce de invitaciones digitales para bodas y XV años en Argentina. El cliente recorre demos reales, personaliza la página de su evento —cuenta regresiva, confirmación de asistencia, mapa, música— y la comparte como un solo link, con WhatsApp como canal principal de contacto y confirmación.
+         Es un producto propio que armé de punta a punta: la tienda, las demos por estilo y el flujo de pedidos.`,
+        demoLink: "https://veintidos-invitaciones.vercel.app",
+        repoLink: "https://github.com/Pablo2205/Veintidos-Ecomerce",
       },
       stack:[
         {
@@ -278,40 +315,43 @@ export const projects = [
         },
         {
           name:"Vercel",
-          svgIcon: "/images/vercel.svg",          
-        },  
-        {
-            name:"Hostinger",
-            svgIcon: "/images/hostinger.svg",
+          svgIcon: "/images/vercel.svg",
         },
       ]
     },
     {
-      id:8,
-      title: 'Ecommerce Website',
-      image: '/images/projectsImages/ecomerce.png',
+      id:11,
+      featured: true,
+      title: 'AjustAR',
+      image: '/images/projectsImages/ajustar.png',
       category:"Development",
       data:{
-        description: 
-        `Ecommerce website for selling products online. Invite digital products.`,
+        description:
+        `AjustAR — a personal finance product for the Argentine market: a spreadsheet (Google Sheets/Excel) sold as a self-serve digital download, with a full end-to-end checkout.
+         Landing built with Next.js, purchase flow through Mercado Pago, automated delivery by e-mail on payment confirmation via webhook, and a light/dark theme system.`,
         description_es:
-        `Sitio de e-commerce para la venta de productos online. Invitaciones y productos digitales. `,
-        demoLink: "https://veintidos-ecomerce.vercel.app",
+        `AjustAR — producto de finanzas personales para el mercado argentino: una planilla (Google Sheets/Excel) vendida como descarga digital autogestionada, con compra de punta a punta.
+         Landing hecha con Next.js, flujo de pago con Mercado Pago, entrega automática por mail al confirmarse el pago vía webhook, y sistema de tema claro/oscuro.`,
+        demoLink: "https://www.miajustar.com",
         repoLink: "",
       },
       stack:[
         {
-          name:"HTML 5",
-          svgIcon: "/images/html5.svg",
+          name:"Next.js",
+          svgIcon: "/images/nextjs.svg",
         },
         {
-          name:"CSS 3",
-          svgIcon: "/images/css.svg",
+          name:"React",
+          svgIcon: "/images/react.svg",
         },
         {
-          name:"Java Script",
-          svgIcon: "/images/javascript.svg",
-        }
+          name:"Tailwind CSS",
+          svgIcon: "/images/tailwindcss.svg",
+        },
+        {
+          name:"Vercel",
+          svgIcon: "/images/vercel.svg",
+        },
       ]
     },
    {
@@ -366,6 +406,71 @@ export const projects = [
     },
   ];
 
+// Historial laboral real, tomado del CV (public/CV_Pablo Coria 2026.pdf).
+// Orden: más reciente primero.
+export const workHistory = [
+  {
+    role: "System Engineer for Microsoft",
+    role_es: "System Engineer for Microsoft",
+    company: "TIVIT LATAM",
+    location: "Buenos Aires, Argentina",
+    period: "Nov 2024 – Present",
+    period_es: "Nov 2024 – Presente",
+    bullets: [
+      "Administer Windows Server and Microsoft SCCM across the full on-premise infrastructure lifecycle.",
+      "Manage Hyper-V and Failover Cluster environments for high availability of critical services.",
+      "Operate core domain services: ADDS, GPO, DHCP, DNS, NPS, File Server, FTP and RDS.",
+      "Administer AWS resources (EC2, S3, VPC, IAM, Security Groups) in hybrid infrastructure scenarios.",
+    ],
+    bullets_es: [
+      "Administro entornos Windows Server y Microsoft SCCM para el ciclo de vida completo de la infraestructura on-premise.",
+      "Gestiono clústeres Hyper-V y Failover Cluster, garantizando alta disponibilidad de servicios críticos.",
+      "Opero servicios core de dominio: ADDS, GPO, DHCP, DNS, NPS, File Server, FTP y RDS.",
+      "Administro recursos AWS (EC2, S3, VPC, IAM, Security Groups) en escenarios de infraestructura híbrida.",
+    ],
+  },
+  {
+    role: "System Administrator",
+    role_es: "System Administrator",
+    company: "GENROD S.A",
+    location: "Departamento de Infraestructura y Aplicaciones",
+    period: "May 2019 – Nov 2024",
+    period_es: "May 2019 – Nov 2024",
+    bullets: [
+      "Administered Microsoft 365 and Windows Server across a hybrid on-premise/cloud infrastructure.",
+      "Managed Linux servers (Ubuntu, CentOS) in production environments.",
+      "Ran VMware vSphere/ESXi/vCenter virtualization and Microsoft SQL Server / MongoDB databases.",
+      "Implemented backup & recovery for Windows Server and Microsoft 365, and automated operations with Shell scripting and Python.",
+    ],
+    bullets_es: [
+      "Administré Microsoft 365 y Windows Server en infraestructura híbrida on-premise/cloud.",
+      "Administré servidores Linux (Ubuntu, CentOS) en ambientes productivos.",
+      "Administré virtualización VMware vSphere/ESXi/vCenter y bases de datos Microsoft SQL Server / MongoDB.",
+      "Implementé backup & recovery para Windows Server y Microsoft 365, y automaticé procesos con Shell Scripting y Python.",
+    ],
+  },
+  {
+    role: "Software Developer (R&D)",
+    role_es: "Software Developer (I+D)",
+    company: "GENROD S.A",
+    location: "Departamento de Investigación & Desarrollo",
+    period: "May 2019 – Nov 2024",
+    period_es: "May 2019 – Nov 2024",
+    bullets: [
+      "Programmed embedded systems in C, C++ and Python for industrial IoT devices.",
+      "Designed and consumed REST, SOAP and MQTT APIs to integrate IoT devices into Smart Grid solutions.",
+      "Designed electronic devices at PCB level and deployed Linux services with Docker.",
+      "Managed code versioning with Git, GitLab and GitHub across the team.",
+    ],
+    bullets_es: [
+      "Programé sistemas embebidos en C, C++ y Python para dispositivos IoT industriales.",
+      "Diseñé y consumí APIs REST, SOAP y MQTT para integrar dispositivos IoT en soluciones de Smart Grid.",
+      "Diseñé dispositivos electrónicos a nivel de PCB y desplegué servicios Linux con Docker.",
+      "Gestioné el versionado de código con Git, GitLab y GitHub.",
+    ],
+  },
+];
+
 export const experience = [
   {
       title: "Frontend Development",
@@ -389,6 +494,11 @@ export const experience = [
               skill: "React",
               level: "Basic",
               svgIcon: "/images/react.svg",
+          },
+          {
+              skill: "Next.js",
+              level: "Intermediate",
+              svgIcon: "/images/nextjs.svg",
           },
           {
             skill: "Tailwind CSS",
@@ -572,6 +682,31 @@ export const experience = [
               svgIcon: "/images/vercel.svg",
           },
       ],
+  },
+  {
+    title: "UX/UI Design",
+      data: [
+          {
+              skill: "Figma",
+              level: "Intermediate",
+              svgIcon: "/images/figma.svg",
+          },
+          {
+              skill: "Adobe Photoshop",
+              level: "Basic",
+              svgIcon: "/images/adobephotoshop.svg",
+          },
+          {
+              skill: "Adobe Illustrator",
+              level: "Basic",
+              svgIcon: "/images/adobeillustrator.svg",
+          },
+          {
+              skill: "Canva",
+              level: "Advanced",
+              svgIcon: "/images/canva.svg",
+          },
+      ],
   }
 ];
 
@@ -588,21 +723,8 @@ export const socialHandles = [
   },*/
 ];
 
-
-export const certifications = [
-  {
-    title: "AWS Certified Cloud Practitioner",
-    issuer: "Amazon Web Services",
-    year: "2024",
-    logo: "/images/aws.svg",
-    link: "",   // URL de Credly/badge — si queda vacío no se muestra el botón
-  },
-  {
-    title: "Microsoft Azure Fundamentals (AZ-900)",
-    issuer: "Microsoft",
-    year: "2024",
-    logo: "/images/azure.svg",
-    link: "",
-  },
-  // ...agregá las que quieras con el mismo formato
-];
+// Sin testimonios reales todavía — la sección no se muestra mientras
+// esto esté vacío (ver Testimonial/index.jsx). Agregar acá cuando
+// haya recomendaciones reales, con el mismo formato:
+// { avatar, name, role, review, review_es }
+export const testimonials = [];

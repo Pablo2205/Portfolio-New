@@ -4,9 +4,9 @@ const translations = {
   en: {
     menu: {
       about: "About",
+      experience: "Experience",
       services: "Services",
       skill: "Skills",
-      certifications: "Certifications",
       projects: "Projects",
       contact: "Contact",
     },
@@ -37,6 +37,10 @@ const translations = {
         sector: "Areas",
         sectorValue: "Infra · Software · Hardware · Cloud",
       },
+    },
+    experience: {
+      sectionTitle: "Experience",
+      current: "Current",
     },
     services: {
       sectionTitle: "Services",
@@ -81,24 +85,26 @@ const translations = {
         "Cloud": "Cloud",
         "Embedded Systems": "Embedded Systems & Hardware",
         "DevOps": "DevOps & Tooling",
+        "UX/UI Design": "UX/UI Design",
       },
-    },
-    certifications: {
-      sectionTitle: "Certifications",
-      description:
-        "Certifications obtained in courses and certifications performed.",
     },
     projects: {
       sectionTitle: "Projects",
       tabs: {
         All: "All",
-        Engineering: "Engineering",
-        Infrastructure: "Infrastructure",
-        Development: "Development",
+        Engineering: "ENG",
+        Infrastructure: "INFRA",
+        Development: "DEV",
       },
       demo: "Live demo",
       repo: "Code",
       moreStack: "More Stack Used",
+      featured: "Featured",
+    },
+    testimonials: {
+      sectionTitle: "Testimonials",
+      description:
+        "What people I've worked with say about it.",
     },
     contact: {
       sectionTitle: "Contact Me",
@@ -110,6 +116,8 @@ const translations = {
         email: "Your email",
         message: "Your message",
         submit: "Send Message",
+        hint: "Opens your email app with the message ready to send.",
+        sent: "Your email app should be opening now — if it didn't, write directly to pablo.cor1@icloud.com.",
       },
     },
     footer: {
@@ -120,9 +128,9 @@ const translations = {
   es: {
     menu: {
       about: "Sobre mí",
+      experience: "Experiencia",
       services: "Servicios",
       skill: "Habilidades",
-      certifications: "Certificados",
       projects: "Proyectos",
       contact: "Contacto",
     },
@@ -153,6 +161,10 @@ const translations = {
         sector: "Áreas",
         sectorValue: "Infra · Software · Hardware · Cloud",
       },
+    },
+    experience: {
+      sectionTitle: "Experiencia",
+      current: "Actual",
     },
     services: {
       sectionTitle: "Servicios",
@@ -201,24 +213,26 @@ const translations = {
         "Cloud": "Cloud",
         "Embedded Systems": "Embebidos y Hardware",
         "DevOps": "DevOps y Herramientas",
+        "UX/UI Design": "Diseño UX/UI",
       },
-    },
-    certifications: {
-      sectionTitle: "Certificados",
-      description:
-        "Certificados obtenidos en cursos y certificaciones realizados.",
     },
     projects: {
       sectionTitle: "Proyectos",
       tabs: {
         All: "Todos",
-        Engineering: "Ingeniería",
-        Infrastructure: "Infraestructura",
-        Development: "Desarrollo",
+        Engineering: "ING",
+        Infrastructure: "INFRA",
+        Development: "DES",
       },
       demo: "Ver demo",
       repo: "Código",
       moreStack: "Más tecnologías",
+      featured: "Destacado",
+    },
+    testimonials: {
+      sectionTitle: "Testimonios",
+      description:
+        "Lo que dicen las personas con las que trabajé.",
     },
     contact: {
       sectionTitle: "Contacto",
@@ -230,6 +244,8 @@ const translations = {
         email: "Tu email",
         message: "Tu mensaje",
         submit: "Enviar mensaje",
+        hint: "Se abre tu app de mail con el mensaje ya armado.",
+        sent: "Debería estar abriéndose tu app de mail — si no pasó, escribime directo a pablo.cor1@icloud.com.",
       },
     },
     footer: {
@@ -245,11 +261,8 @@ const LanguageContext = createContext({
 })
 
 export const LanguageProvider = ({ children }) => {
-  const initial =
-    typeof navigator !== "undefined" && navigator.language?.startsWith("es")
-      ? "es"
-      : "en"
-  const [lang, setLang] = useState(initial)
+  // Idioma por defecto: inglés siempre, sin importar el idioma del navegador.
+  const [lang, setLang] = useState("en")
   return (
     <LanguageContext.Provider value={{ lang, setLang, t: translations[lang] }}>
       {children}

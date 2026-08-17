@@ -10,9 +10,14 @@ const tabs = [
   {name:"Infrastructure"},
   {name:"Development"},
 ]
+// Los proyectos "featured" (productos propios/de cliente reales) van
+// primero, sin alterar el orden relativo del resto.
+const sortFeatured = (list) =>
+  [...list].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0))
+
 const Projects = () => {
   const { t } = useLanguage();
-  const [displayableProjects,setDisplayableProjects] = useState(projects)
+  const [displayableProjects,setDisplayableProjects] = useState(sortFeatured(projects))
   const [activeIndex,setActiveIndex] = useState(0);
   const [offset,setOffset] = useState(0)
   const [indicatorWidth,setIndicatorWidth] = useState(0);
@@ -30,10 +35,10 @@ const Projects = () => {
 
   const setProjects = (category) =>{
     if(category === "All"){
-      return setDisplayableProjects(projects)
+      return setDisplayableProjects(sortFeatured(projects))
     }
     const pro = projects.filter((item)=>item.category.toLowerCase() === category.toLowerCase())
-    setDisplayableProjects(pro)
+    setDisplayableProjects(sortFeatured(pro))
   }
 
   return (
@@ -75,6 +80,7 @@ const Projects = () => {
                data={project.data}
                stack={project.stack}
                category={project.category}
+               featured={project.featured}
                demoLink={project.data.demoLink}
                repoLink={project.data.repoLink}
                key={index}

@@ -8,11 +8,11 @@
   z-index: 1000;
   transition: top 400ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  background: rgba(243, 244, 246, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(var(--bg-rgb), 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
-  box-shadow: 0 4px 24px rgba(15, 42, 107, 0.05);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .navbar__container.visible {
@@ -119,9 +119,9 @@
     align-items: flex-start;
     padding: 80px 20px 40px;
     gap: 4px;
-    background: #FFFFFF;
+    background: var(--bg-2);
     border-left: 1px solid var(--line);
-    box-shadow: -16px 0 40px rgba(15, 42, 107, 0.12);
+    box-shadow: -16px 0 40px rgba(0, 0, 0, 0.45);
     z-index: 1001;
     transition: right 350ms cubic-bezier(0.16, 1, 0.3, 1);
   }
